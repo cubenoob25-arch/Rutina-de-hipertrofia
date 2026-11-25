@@ -24,3 +24,10 @@ Se mantiene la misma clave localStorage (rutina_hipertrofia_tracker_v1), para co
 
 NOTA
 Los datos se guardan localmente en el navegador/dispositivo. Para transferirlos entre dispositivos, exportá e importá un backup.
+
+
+Actualización V4 – mapa muscular corregido
+- Silueta frontal y posterior rehecha con proporciones más claras.
+- Zonas anatómicas ubicadas según vista: pecho, bíceps y cuádriceps al frente; espalda, tríceps, isquiotibiales y gemelos atrás; hombros en ambas vistas.
+- Zonas seleccionables también con teclado.
+- Caché de PWA actualizado a v4.
