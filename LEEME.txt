@@ -27,3 +27,11 @@ Los registros se guardan localmente en el navegador/dispositivo. No se sincroniz
 
 NO ES UN APK NATIVO
 Es una PWA: queda instalada desde Chrome y se comporta como una app, sin pasar por Play Store. Un APK nativo requeriría empaquetarla y firmarla por separado.
+
+
+NOVEDADES DE ESTA VERSION
+- En Rutina, tocá el nombre de un ejercicio para abrir la biblioteca de variantes del mismo grupo muscular.
+- Podés buscar por nombre/equipamiento y sustituir el ejercicio de ese día.
+- Podés crear variantes personalizadas; quedan guardadas en el dispositivo y se incluyen en el backup JSON.
+- Los registros anteriores no se borran al cambiar un ejercicio y siguen apareciendo en Progresión.
+- Después de subir esta versión a GitHub Pages, abrí la aplicación instalada con conexión y recargala una vez para que se actualice el modo offline.
