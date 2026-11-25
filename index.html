@@ -12,7 +12,7 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
 <link rel="apple-touch-icon" href="./icon-192.png">
-<title>Hipertrofia Tracker · V7</title>
+<title>Hipertrofia Tracker · V8</title>
 <style>
 :root{--bg:#0b1220;--panel:#121d2e;--panel2:#172438;--line:#27364b;--text:#eef4fb;--muted:#9cacc1;--accent:#8bc4ff;--accent2:#b5e4cb;--warn:#f5c66e;--danger:#ff9c9c;--shadow:0 12px 32px rgba(0,0,0,.22);--radius:18px}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(1000px 500px at 20% -10%,#1b3553 0%,transparent 55%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:1180px;margin:auto;padding:24px 20px 50px}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:20px}.brand{display:flex;align-items:center;gap:13px}.logo{height:45px;width:45px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#8bc4ff,#a6e4ce);color:#102035;font-size:23px;font-weight:900}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:800}.brand h1{font-size:21px;line-height:1.2;margin:2px 0 0}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:#1a2940;color:var(--text);border-radius:11px;padding:9px 13px;font-weight:700;font-size:13px;transition:.15s}.btn:hover{border-color:#6d9bc4;transform:translateY(-1px)}.btn.primary{background:var(--accent);border-color:var(--accent);color:#122238}.btn.soft{background:transparent}.btn.danger{color:var(--danger)}.save-state{font-size:12px;color:var(--muted);margin:0 0 15px;display:flex;gap:7px;align-items:center}.dot{height:7px;width:7px;border-radius:50%;background:var(--accent2);display:inline-block}.nav{display:flex;gap:7px;padding:6px;background:#101a29;border:1px solid var(--line);border-radius:14px;margin-bottom:20px;overflow-x:auto}.nav button{white-space:nowrap;color:var(--muted);border:0;background:transparent;padding:10px 15px;border-radius:10px;font-weight:750}.nav button.active{color:var(--text);background:#263a54;box-shadow:inset 0 0 0 1px #395575}.view{display:none}.view.active{display:block}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:6px 0 16px}.section-head h2{margin:0;font-size:23px;letter-spacing:-.02em}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}.grid{display:grid;gap:14px}.kpis{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:16px}.card{background:linear-gradient(180deg,rgba(22,36,56,.96),rgba(17,29,46,.96));border:1px solid var(--line);border-radius:var(--radius);padding:17px;box-shadow:var(--shadow)}.kpi-label{color:var(--muted);font-size:12px;font-weight:700}.kpi-value{font-size:29px;font-weight:850;letter-spacing:-.04em;margin-top:6px}.kpi-note{font-size:11px;color:var(--muted);margin-top:2px}.two-col{grid-template-columns:1.2fr .8fr}.card h3{margin:0 0 12px;font-size:16px}.muted{color:var(--muted)}.small{font-size:12px}.pill{display:inline-flex;align-items:center;gap:5px;border:1px solid #344b65;border-radius:999px;padding:3px 9px;font-size:11px;color:#c8d9ec;font-weight:750}.pill.good{border-color:#366c5b;color:#a9e4ca;background:#193c35}.pill.warn{border-color:#806638;color:#ffd990;background:#44361e}.pill.bad{border-color:#75454b;color:#ffc0c0;background:#43282e}.day-list{display:grid;gap:10px}.day-card{background:rgba(20,33,51,.78);border:1px solid var(--line);border-radius:15px;overflow:hidden}.day-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 15px;background:#17263a}.day-name{font-weight:850}.day-desc{font-size:12px;color:var(--muted)}.exercise-list{padding:0 14px}.exercise{display:grid;grid-template-columns:minmax(0,1fr) 70px 92px 96px;gap:12px;align-items:center;padding:12px 2px;border-bottom:1px solid rgba(54,73,97,.5)}.exercise:last-child{border-bottom:0}.exercise-name{font-weight:750}.exercise-meta{font-size:12px;color:var(--muted);margin-top:2px}.sets{font-weight:850;text-align:center;color:var(--accent2)}.reps{text-align:center;color:#d1dceb;font-size:13px}.zero{color:var(--muted);font-size:11px;text-align:center}.btn.tiny{padding:7px 9px;font-size:11px}.routine-footer{margin-top:13px;color:var(--muted);font-size:12px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:12px;color:#bdcce0;font-weight:750}.field input,.field select,.field textarea,.target-input{width:100%;color:var(--text);background:#0e1928;border:1px solid #34465e;border-radius:10px;padding:10px 11px;outline:none}.field input:focus,.field select:focus,.field textarea:focus,.target-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(139,196,255,.12)}.field textarea{min-height:72px;resize:vertical}.field.full{grid-column:1/-1}.hint{font-size:11px;color:var(--muted)}.form-actions{display:flex;align-items:center;gap:10px;margin-top:16px;flex-wrap:wrap}.notice{background:#182a3d;border:1px solid #35516d;padding:12px 14px;border-radius:12px;color:#c8d9ec;font-size:12px;margin-top:13px}.notice strong{color:#fff}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:13px}table{border-collapse:collapse;width:100%;min-width:570px;font-size:13px}th,td{padding:10px 11px;text-align:left;border-bottom:1px solid rgba(54,73,97,.58)}th{background:#17263a;color:#b9c9de;font-size:11px;text-transform:uppercase;letter-spacing:.06em}td{color:#e2eaf4}tr:last-child td{border-bottom:0}.empty{padding:22px;text-align:center;color:var(--muted);font-size:13px}.target-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.target-row{display:grid;grid-template-columns:minmax(0,1fr) 82px 82px;gap:10px;align-items:center;padding:12px;background:#132136;border:1px solid var(--line);border-radius:12px}.target-name{font-weight:750;font-size:13px}.target-sub{font-size:11px;color:var(--muted);margin-top:2px}.target-input{text-align:center;padding:8px}.target-current{text-align:center;font-weight:850;color:var(--accent2)}.target-head{display:grid;grid-template-columns:minmax(0,1fr) 82px 82px;gap:10px;padding:0 12px 7px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.07em}.chart-card{min-height:310px}.chart-wrap{width:100%;overflow:hidden}.chart-wrap svg{width:100%;height:auto;display:block}.legend{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px;margin-top:8px}.legend span:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:6px}.alert-list{display:grid;gap:9px}.alert{border:1px solid #6d5731;background:#322a1c;border-radius:12px;padding:11px 12px}.alert strong{display:block;color:#ffda9c;font-size:13px}.alert p{margin:3px 0 0;color:#d4c2a1;font-size:12px}.success-note{border:1px solid #315c51;background:#17342f;color:#bde8d4;padding:13px;border-radius:12px;font-size:13px}.record-row{display:flex;justify-content:space-between;gap:12px;align-items:center}.record-row strong{font-size:13px}.record-row .right{text-align:right}.del{color:#ffaaaa;background:transparent;border:0;font-size:12px;padding:4px}.footer{margin-top:24px;border-top:1px solid var(--line);padding-top:15px;color:#8294aa;font-size:11px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.hidden{display:none!important}
@@ -124,6 +124,51 @@ button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid 
 }
 @media(min-width:761px){.more-menu{display:none!important}}
 
+
+/* V8 · mapa muscular simplificado + puntaje personal */
+.body-score-card{margin-bottom:13px;padding:16px 18px}
+.body-score-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.body-score-head h3{margin:3px 0 3px;font-size:16px}
+.body-score-head p{margin:0;max-width:440px}
+.body-score-number{display:flex;align-items:baseline;gap:4px;white-space:nowrap}
+.body-score-number strong{font-size:42px;line-height:1;font-weight:850;letter-spacing:-.06em;font-variant-numeric:tabular-nums}
+.body-score-number span{font-size:12px;color:var(--muted);font-weight:700}
+.body-score-track{height:8px;border-radius:99px;background:var(--surface-3);overflow:hidden;margin:14px 0 12px}
+.body-score-track span{height:100%;display:block;width:0;border-radius:inherit;background:linear-gradient(90deg,#cbd9d1,#579c7d,#176b50);transition:width .25s}
+.body-score-components{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.body-score-component{min-width:0;padding:9px 10px;border-radius:10px;background:var(--surface);border:1px solid var(--line)}
+.body-score-component strong{display:block;font-size:15px;font-variant-numeric:tabular-nums}
+.body-score-component span{display:block;margin-top:2px;color:var(--muted);font-size:10px}
+.body-score-note{font-size:10px;color:var(--muted);line-height:1.4;margin:10px 0 0}
+.map-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0 4px;flex-wrap:wrap}
+.map-mode-switch{display:inline-flex;padding:3px;border:1px solid var(--line);background:var(--surface);border-radius:11px;gap:3px}
+.map-mode-switch button{border:0;border-radius:8px;padding:8px 13px;background:transparent;color:var(--muted);font:inherit;font-size:11px;font-weight:750}
+.map-mode-switch button.active{background:var(--surface-3);color:var(--text)}
+.map-legend{display:flex;align-items:center;gap:8px;font-size:10px;color:var(--muted);flex-wrap:wrap}
+.map-legend span{display:inline-flex;align-items:center;gap:4px}
+.legend-swatch{width:9px;height:9px;display:inline-block;border-radius:3px}
+.kinoku-maps{max-width:450px;gap:22px;margin-top:12px}
+.kinoku-maps .body-map{max-width:190px;width:100%;max-height:390px}
+.kinoku-maps .body-map-label{font-size:11px;font-weight:750;letter-spacing:.02em;margin-bottom:3px}
+.kinoku-body-map{filter:none;overflow:visible}
+.kinoku-body-map .figure-base{fill:var(--surface-3);stroke:var(--figure-stroke);stroke-width:1.2;stroke-linejoin:round}
+.kinoku-body-map .muscle-zones [data-map-muscle]{fill:#e2e8e4;stroke:var(--panel);stroke-width:1.3;stroke-linejoin:round;cursor:pointer;opacity:1;transition:fill .2s,stroke .2s}
+.kinoku-body-map .muscle-zones [data-map-muscle]:hover{stroke:var(--text);stroke-width:1.8}
+.kinoku-body-map .muscle-zones [data-map-muscle].active{stroke:var(--text);stroke-width:2}
+.kinoku-body-map .muscle-zones [data-map-muscle]:focus-visible{outline:none;stroke:var(--text);stroke-width:2.2}
+.muscle-map-note{max-width:700px}
+@media(max-width:560px){
+ .body-score-card{padding:14px}
+ .body-score-number strong{font-size:36px}
+ .body-score-components{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .map-tools{align-items:flex-start;flex-direction:column}
+ .kinoku-maps{gap:5px}
+ .kinoku-maps .body-map{max-width:100%;max-height:345px}
+ .map-legend{gap:6px}
+ .map-mode-switch{width:100%}
+ .map-mode-switch button{flex:1}
+}
+
 </style>
 
 <style id="v7-minimal-overrides">
@@ -150,8 +195,8 @@ input,select,textarea{background:#fff!important;color:var(--text)!important;bord
 <body>
 <div class="app">
   <header class="top">
-    <div class="brand"><div class="logo">V6</div><div><div class="eyebrow">Plan de entrenamiento</div><h1>Hipertrofia Tracker</h1></div></div>
-    <div class="top-actions"><span class="top-chip">V7 · Entrenamiento personal</span></div>
+    <div class="brand"><div class="logo">V8</div><div><div class="eyebrow">Plan de entrenamiento</div><h1>Hipertrofia Tracker</h1></div></div>
+    <div class="top-actions"><span class="top-chip">V8 · Entrenamiento personal</span></div>
   </header>
   <p class="save-state"><span class="dot"></span><span id="saveText">Tus datos se guardan en este navegador.</span></p>
   <nav class="nav" aria-label="Secciones principales">
@@ -244,109 +289,92 @@ input,select,textarea{background:#fff!important;color:var(--text)!important;bord
 
     <section class="view" id="view-muscles">
       <div class="section-head"><div><h2>Mapa muscular</h2><p>Volumen directo registrado. Elegí el período para comparar tu actividad con el objetivo semanal equivalente.</p></div><div class="muscle-period-controls"><select id="musclePeriod" aria-label="Período de estadísticas musculares"><option value="week">Semana actual</option><option value="7">Últimos 7 días</option><option value="30">Últimos 30 días</option><option value="90">Últimos 90 días</option></select><span class="pill" id="muscleWeekLabel">Semana actual</span></div></div>
+      <div class="card body-score-card">
+        <div class="body-score-head">
+          <div><div class="eyebrow">ÍNDICE PERSONAL</div><h3>Puntaje corporal</h3><p class="small muted">Tu actividad registrada, combinando series, carga, frecuencia y esfuerzo.</p></div>
+          <div class="body-score-number"><strong id="bodyScoreValue">—</strong><span>/100</span></div>
+        </div>
+        <div class="body-score-track"><span id="bodyScoreBar"></span></div>
+        <div class="body-score-components" id="bodyScoreComponents"></div>
+        <p class="body-score-note">Es un indicador de entrenamiento, no una medición del tamaño muscular ni de tu composición corporal.</p>
+      </div>
       <div class="grid kpis muscle-kpis" id="muscleKpis"></div>
       <div class="grid muscle-layout">
         <div class="card muscle-map-card">
-          <div class="muscle-map-heading"><div><h3>Vista del cuerpo</h3><p class="small muted">Tocá un músculo para ver su detalle.</p></div><div class="map-legend"><span><i class="legend-dot low"></i>En progreso</span><span><i class="legend-dot reached"></i>Objetivo alcanzado</span></div></div>
-          <div class="body-maps anatomy-maps">
-            <div class="body-map-wrap"><div class="body-map-label">Frente · músculos anteriores</div>
-              <svg class="body-map detailed-body-map" viewBox="0 0 240 500" role="img" aria-label="Mapa anatómico frontal: deltoides, pectorales, bíceps y cuádriceps seleccionables." focusable="false">
+          <div class="muscle-map-heading"><div><h3>Mapa muscular</h3><p class="small muted">Tocá una zona para ver sus estadísticas.</p></div></div>
+          <div class="map-tools">
+            <div class="map-mode-switch" role="group" aria-label="Modo del mapa muscular">
+              <button type="button" data-map-mode="score" class="active" aria-pressed="true">Puntaje</button>
+              <button type="button" data-map-mode="frequency" aria-pressed="false">Frecuencia</button>
+            </div>
+            <div class="map-legend" id="muscleMapLegend" aria-live="polite"></div>
+          </div>
+          <div class="body-maps kinoku-maps">
+            <div class="body-map-wrap">
+              <div class="body-map-label">Frente</div>
+              <svg class="body-map kinoku-body-map" viewBox="0 0 200 430" role="img" aria-label="Vista frontal del mapa muscular. Tocá un grupo para consultar sus datos.">
                 <g class="figure-base">
-                  <circle cx="120" cy="37" r="19"/>
-                  <path d="M111 57 L129 57 L132 76 L108 76 Z"/>
-                  <path d="M103 72 Q88 73 77 81 Q65 89 65 109 L73 151 Q78 171 76 195 L69 224 Q69 239 88 245 L105 242 L120 237 L135 242 L152 245 Q171 239 171 224 L164 195 Q162 171 167 151 L175 109 Q175 89 163 81 Q152 73 137 72 L132 76 L108 76 Z"/>
-                  <path d="M75 84 Q59 83 52 100 L37 154 Q33 166 40 172 Q48 178 55 168 L69 127 L84 109 Z"/>
-                  <path d="M165 84 Q181 83 188 100 L203 154 Q207 166 200 172 Q192 178 185 168 L171 127 L156 109 Z"/>
-                  <path d="M39 169 Q31 172 29 183 L24 203 Q23 211 30 214 Q37 216 41 207 L49 181 Z"/>
-                  <path d="M201 169 Q209 172 211 183 L216 203 Q217 211 210 214 Q203 216 199 207 L191 181 Z"/>
-                  <path d="M91 237 Q78 240 79 259 L83 326 Q84 343 97 348 L112 344 L118 253 L120 241 Z"/>
-                  <path d="M149 237 Q162 240 161 259 L157 326 Q156 343 143 348 L128 344 L122 253 L120 241 Z"/>
-                  <path d="M84 344 Q91 350 105 348 L111 353 L102 448 Q101 463 91 465 Q79 466 78 453 L80 382 Z"/>
-                  <path d="M156 344 Q149 350 135 348 L129 353 L138 448 Q139 463 149 465 Q161 466 162 453 L160 382 Z"/>
-                  <path d="M80 451 Q89 459 102 454 L105 467 Q104 475 91 477 L75 474 Q70 470 75 463 Z"/>
-                  <path d="M160 451 Q151 459 138 454 L135 467 Q136 475 149 477 L165 474 Q170 470 165 463 Z"/>
+                  <circle cx="100" cy="25" r="15"/>
+                  <path d="M92 42 L108 42 L111 57 L89 57 Z"/>
+                  <path d="M78 56 Q66 58 64 77 L69 143 Q72 160 86 168 L89 188 L111 188 L114 168 Q128 160 131 143 L136 77 Q134 58 122 56 Q111 61 100 61 Q89 61 78 56Z"/>
+                  <path d="M67 64 Q55 65 51 82 L40 128 Q37 141 46 147 Q54 150 58 139 L73 101 L78 78 Z"/>
+                  <path d="M133 64 Q145 65 149 82 L160 128 Q163 141 154 147 Q146 150 142 139 L127 101 L122 78 Z"/>
+                  <path d="M45 143 Q38 146 37 159 L34 188 Q34 198 42 201 Q49 202 52 192 L57 161 Z"/>
+                  <path d="M155 143 Q162 146 163 159 L166 188 Q166 198 158 201 Q151 202 148 192 L143 161 Z"/>
+                  <path d="M87 183 Q75 187 76 204 L79 274 Q80 286 93 288 L99 282 L99 192 Z"/>
+                  <path d="M113 183 Q125 187 124 204 L121 274 Q120 286 107 288 L101 282 L101 192 Z"/>
+                  <path d="M80 282 Q89 287 99 284 L98 370 Q97 386 88 389 Q77 389 77 376 L77 322 Z"/>
+                  <path d="M120 282 Q111 287 101 284 L102 370 Q103 386 112 389 Q123 389 123 376 L123 322 Z"/>
+                  <path d="M78 376 Q87 383 98 378 L99 391 Q97 400 84 400 L72 396 Q70 391 74 385 Z"/>
+                  <path d="M122 376 Q113 383 102 378 L101 391 Q103 400 116 400 L128 396 Q130 391 126 385 Z"/>
                 </g>
                 <g class="muscle-zones">
-                  <!-- Deltoides anteriores: dos regiones -->
-                  <path data-map-muscle="shoulders" role="button" tabindex="0" aria-label="Deltoides anterior izquierdo · Hombros" d="M73 87 Q81 77 99 78 Q96 91 86 104 Q78 110 69 105 Q66 97 73 87 Z"/>
-                  <path data-map-muscle="shoulders" role="button" tabindex="0" aria-label="Deltoides anterior derecho · Hombros" d="M167 87 Q159 77 141 78 Q144 91 154 104 Q162 110 171 105 Q174 97 167 87 Z"/>
-                  <!-- Pectoral mayor, porciones clavicular y esternocostal -->
-                  <path data-map-muscle="chest" role="button" tabindex="0" aria-label="Pectoral superior izquierdo · Pecho" d="M83 91 Q96 83 117 91 L117 112 Q105 119 91 112 Q82 106 83 91 Z"/>
-                  <path data-map-muscle="chest" role="button" tabindex="0" aria-label="Pectoral inferior izquierdo · Pecho" d="M82 114 Q98 119 117 114 L117 139 Q101 145 87 133 Q81 126 82 114 Z"/>
-                  <path data-map-muscle="chest" role="button" tabindex="0" aria-label="Pectoral superior derecho · Pecho" d="M157 91 Q144 83 123 91 L123 112 Q135 119 149 112 Q158 106 157 91 Z"/>
-                  <path data-map-muscle="chest" role="button" tabindex="0" aria-label="Pectoral inferior derecho · Pecho" d="M158 114 Q142 119 123 114 L123 139 Q139 145 153 133 Q159 126 158 114 Z"/>
-                  <!-- Bíceps braquial, ambas cabezas simplificadas -->
-                  <path data-map-muscle="biceps" role="button" tabindex="0" aria-label="Bíceps izquierdo · cabeza larga" d="M60 111 Q66 105 73 112 L68 142 Q65 153 57 158 Q52 157 53 149 Z"/>
-                  <path data-map-muscle="biceps" role="button" tabindex="0" aria-label="Bíceps izquierdo · cabeza corta" d="M72 112 Q78 111 80 120 L72 148 Q68 157 61 158 L63 139 Z"/>
-                  <path data-map-muscle="biceps" role="button" tabindex="0" aria-label="Bíceps derecho · cabeza larga" d="M180 111 Q174 105 167 112 L172 142 Q175 153 183 158 Q188 157 187 149 Z"/>
-                  <path data-map-muscle="biceps" role="button" tabindex="0" aria-label="Bíceps derecho · cabeza corta" d="M168 112 Q162 111 160 120 L168 148 Q172 157 179 158 L177 139 Z"/>
-                  <!-- Cuádriceps: recto femoral y vastos -->
-                  <path data-map-muscle="quads" role="button" tabindex="0" aria-label="Recto femoral izquierdo · Cuádriceps" d="M103 249 Q109 244 117 251 L112 323 Q110 337 101 340 Q94 338 94 326 L96 267 Z"/>
-                  <path data-map-muscle="quads" role="button" tabindex="0" aria-label="Vasto lateral izquierdo · Cuádriceps" d="M91 251 Q98 248 100 259 L94 326 Q91 337 86 331 Q83 323 84 300 L84 265 Q85 255 91 251 Z"/>
-                  <path data-map-muscle="quads" role="button" tabindex="0" aria-label="Vasto medial izquierdo · Cuádriceps" d="M113 322 Q117 306 118 279 L117 337 Q111 347 101 342 Q109 340 113 322 Z"/>
-                  <path data-map-muscle="quads" role="button" tabindex="0" aria-label="Recto femoral derecho · Cuádriceps" d="M137 249 Q131 244 123 251 L128 323 Q130 337 139 340 Q146 338 146 326 L144 267 Z"/>
-                  <path data-map-muscle="quads" role="button" tabindex="0" aria-label="Vasto lateral derecho · Cuádriceps" d="M149 251 Q142 248 140 259 L146 326 Q149 337 154 331 Q157 323 156 300 L156 265 Q155 255 149 251 Z"/>
-                  <path data-map-muscle="quads" role="button" tabindex="0" aria-label="Vasto medial derecho · Cuádriceps" d="M127 322 Q123 306 122 279 L123 337 Q129 347 139 342 Q131 340 127 322 Z"/>
-                </g>
-                <g class="map-detail-lines" aria-hidden="true">
-                  <path d="M120 78 L120 143 M120 145 L120 228 M82 147 Q91 160 101 165 M158 147 Q149 160 139 165 M120 242 L120 346 M92 351 L86 443 M148 351 L154 443"/>
-                  <path d="M56 166 Q66 169 73 156 M184 166 Q174 169 167 156 M88 235 Q120 250 152 235"/>
+                  <path data-map-muscle="shoulders" d="M68 67 Q77 59 88 68 L82 91 Q72 96 64 86 Z"/>
+                  <path data-map-muscle="shoulders" d="M132 67 Q123 59 112 68 L118 91 Q128 96 136 86 Z"/>
+                  <path data-map-muscle="chest" d="M81 78 Q91 70 98 77 L98 112 Q87 116 78 105 Z"/>
+                  <path data-map-muscle="chest" d="M119 78 Q109 70 102 77 L102 112 Q113 116 122 105 Z"/>
+                  <path data-map-muscle="biceps" d="M55 91 Q63 85 70 94 L62 132 Q57 140 50 134 Z"/>
+                  <path data-map-muscle="biceps" d="M145 91 Q137 85 130 94 L138 132 Q143 140 150 134 Z"/>
+                  <path data-map-muscle="quads" d="M84 194 Q92 188 98 196 L96 271 Q91 282 83 275 L81 220 Z"/>
+                  <path data-map-muscle="quads" d="M116 194 Q108 188 102 196 L104 271 Q109 282 117 275 L119 220 Z"/>
                 </g>
               </svg>
             </div>
-            <div class="body-map-wrap"><div class="body-map-label">Espalda · músculos posteriores</div>
-              <svg class="body-map detailed-body-map" viewBox="0 0 240 500" role="img" aria-label="Mapa anatómico posterior: deltoides posteriores, trapecios, dorsales, tríceps, isquiotibiales y gemelos seleccionables." focusable="false">
+            <div class="body-map-wrap">
+              <div class="body-map-label">Espalda</div>
+              <svg class="body-map kinoku-body-map" viewBox="0 0 200 430" role="img" aria-label="Vista posterior del mapa muscular. Tocá un grupo para consultar sus datos.">
                 <g class="figure-base">
-                  <circle cx="120" cy="37" r="19"/>
-                  <path d="M111 57 L129 57 L132 76 L108 76 Z"/>
-                  <path d="M103 72 Q88 73 77 81 Q65 89 65 109 L73 151 Q78 171 76 195 L69 224 Q69 239 88 245 L105 242 L120 237 L135 242 L152 245 Q171 239 171 224 L164 195 Q162 171 167 151 L175 109 Q175 89 163 81 Q152 73 137 72 L132 76 L108 76 Z"/>
-                  <path d="M75 84 Q59 83 52 100 L37 154 Q33 166 40 172 Q48 178 55 168 L69 127 L84 109 Z"/>
-                  <path d="M165 84 Q181 83 188 100 L203 154 Q207 166 200 172 Q192 178 185 168 L171 127 L156 109 Z"/>
-                  <path d="M39 169 Q31 172 29 183 L24 203 Q23 211 30 214 Q37 216 41 207 L49 181 Z"/>
-                  <path d="M201 169 Q209 172 211 183 L216 203 Q217 211 210 214 Q203 216 199 207 L191 181 Z"/>
-                  <path d="M91 237 Q78 240 79 259 L83 326 Q84 343 97 348 L112 344 L118 253 L120 241 Z"/>
-                  <path d="M149 237 Q162 240 161 259 L157 326 Q156 343 143 348 L128 344 L122 253 L120 241 Z"/>
-                  <path d="M84 344 Q91 350 105 348 L111 353 L102 448 Q101 463 91 465 Q79 466 78 453 L80 382 Z"/>
-                  <path d="M156 344 Q149 350 135 348 L129 353 L138 448 Q139 463 149 465 Q161 466 162 453 L160 382 Z"/>
-                  <path d="M80 451 Q89 459 102 454 L105 467 Q104 475 91 477 L75 474 Q70 470 75 463 Z"/>
-                  <path d="M160 451 Q151 459 138 454 L135 467 Q136 475 149 477 L165 474 Q170 470 165 463 Z"/>
+                  <circle cx="100" cy="25" r="15"/>
+                  <path d="M92 42 L108 42 L111 57 L89 57 Z"/>
+                  <path d="M78 56 Q66 58 64 77 L69 143 Q72 160 86 168 L89 188 L111 188 L114 168 Q128 160 131 143 L136 77 Q134 58 122 56 Q111 61 100 61 Q89 61 78 56Z"/>
+                  <path d="M67 64 Q55 65 51 82 L40 128 Q37 141 46 147 Q54 150 58 139 L73 101 L78 78 Z"/>
+                  <path d="M133 64 Q145 65 149 82 L160 128 Q163 141 154 147 Q146 150 142 139 L127 101 L122 78 Z"/>
+                  <path d="M45 143 Q38 146 37 159 L34 188 Q34 198 42 201 Q49 202 52 192 L57 161 Z"/>
+                  <path d="M155 143 Q162 146 163 159 L166 188 Q166 198 158 201 Q151 202 148 192 L143 161 Z"/>
+                  <path d="M87 183 Q75 187 76 204 L79 274 Q80 286 93 288 L99 282 L99 192 Z"/>
+                  <path d="M113 183 Q125 187 124 204 L121 274 Q120 286 107 288 L101 282 L101 192 Z"/>
+                  <path d="M80 282 Q89 287 99 284 L98 370 Q97 386 88 389 Q77 389 77 376 L77 322 Z"/>
+                  <path d="M120 282 Q111 287 101 284 L102 370 Q103 386 112 389 Q123 389 123 376 L123 322 Z"/>
+                  <path d="M78 376 Q87 383 98 378 L99 391 Q97 400 84 400 L72 396 Q70 391 74 385 Z"/>
+                  <path d="M122 376 Q113 383 102 378 L101 391 Q103 400 116 400 L128 396 Q130 391 126 385 Z"/>
                 </g>
                 <g class="muscle-zones">
-                  <!-- Deltoides posteriores -->
-                  <path data-map-muscle="shoulders" role="button" tabindex="0" aria-label="Deltoides posterior izquierdo · Hombros" d="M73 87 Q81 77 99 78 Q96 91 86 104 Q78 110 69 105 Q66 97 73 87 Z"/>
-                  <path data-map-muscle="shoulders" role="button" tabindex="0" aria-label="Deltoides posterior derecho · Hombros" d="M167 87 Q159 77 141 78 Q144 91 154 104 Q162 110 171 105 Q174 97 167 87 Z"/>
-                  <!-- Trapecio superior y medio -->
-                  <path data-map-muscle="back" role="button" tabindex="0" aria-label="Trapecio superior · Espalda" d="M105 78 Q120 72 135 78 L151 96 Q137 109 120 121 Q103 109 89 96 Z"/>
-                  <path data-map-muscle="back" role="button" tabindex="0" aria-label="Trapecio medio · Espalda" d="M91 99 Q106 111 120 121 Q134 111 149 99 L145 132 Q133 143 120 145 Q107 143 95 132 Z"/>
-                  <!-- Dorsal ancho y zona lumbar/erectores -->
-                  <path data-map-muscle="back" role="button" tabindex="0" aria-label="Dorsal ancho izquierdo · Espalda" d="M91 124 Q105 137 115 145 L112 198 Q99 211 86 198 Q78 179 80 153 Z"/>
-                  <path data-map-muscle="back" role="button" tabindex="0" aria-label="Dorsal ancho derecho · Espalda" d="M149 124 Q135 137 125 145 L128 198 Q141 211 154 198 Q162 179 160 153 Z"/>
-                  <path data-map-muscle="back" role="button" tabindex="0" aria-label="Erectores espinales · Espalda" d="M115 145 Q120 141 125 145 L128 210 Q120 218 112 210 Z"/>
-                  <!-- Tríceps: cabezas larga y lateral simplificadas -->
-                  <path data-map-muscle="triceps" role="button" tabindex="0" aria-label="Tríceps izquierdo · cabeza larga" d="M60 111 Q66 105 73 112 L68 142 Q65 153 57 158 Q52 157 53 149 Z"/>
-                  <path data-map-muscle="triceps" role="button" tabindex="0" aria-label="Tríceps izquierdo · cabeza lateral" d="M72 112 Q78 111 80 120 L72 148 Q68 157 61 158 L63 139 Z"/>
-                  <path data-map-muscle="triceps" role="button" tabindex="0" aria-label="Tríceps derecho · cabeza larga" d="M180 111 Q174 105 167 112 L172 142 Q175 153 183 158 Q188 157 187 149 Z"/>
-                  <path data-map-muscle="triceps" role="button" tabindex="0" aria-label="Tríceps derecho · cabeza lateral" d="M168 112 Q162 111 160 120 L168 148 Q172 157 179 158 L177 139 Z"/>
-                  <!-- Isquiotibiales: bíceps femoral y semitendinoso/semimembranoso -->
-                  <path data-map-muscle="hams" role="button" tabindex="0" aria-label="Bíceps femoral izquierdo · Isquiotibiales" d="M91 250 Q100 244 111 252 L105 327 Q100 339 91 334 Q86 321 87 291 Z"/>
-                  <path data-map-muscle="hams" role="button" tabindex="0" aria-label="Semitendinoso izquierdo · Isquiotibiales" d="M113 251 Q118 247 119 254 L116 333 Q110 342 104 334 L108 278 Z"/>
-                  <path data-map-muscle="hams" role="button" tabindex="0" aria-label="Bíceps femoral derecho · Isquiotibiales" d="M149 250 Q140 244 129 252 L135 327 Q140 339 149 334 Q154 321 153 291 Z"/>
-                  <path data-map-muscle="hams" role="button" tabindex="0" aria-label="Semitendinoso derecho · Isquiotibiales" d="M127 251 Q122 247 121 254 L124 333 Q130 342 136 334 L132 278 Z"/>
-                  <!-- Gemelos: gastrocnemio medial/lateral y sóleo -->
-                  <path data-map-muscle="calves" role="button" tabindex="0" aria-label="Gemelo lateral izquierdo · Gemelos" d="M88 352 Q95 344 103 354 L99 403 Q95 418 86 412 Q81 403 83 382 Z"/>
-                  <path data-map-muscle="calves" role="button" tabindex="0" aria-label="Gemelo medial izquierdo · Gemelos" d="M106 352 Q112 348 116 359 L112 408 Q108 420 101 414 L101 379 Z"/>
-                  <path data-map-muscle="calves" role="button" tabindex="0" aria-label="Gemelo medial derecho · Gemelos" d="M134 352 Q127 348 124 359 L128 408 Q132 420 139 414 L139 379 Z"/>
-                  <path data-map-muscle="calves" role="button" tabindex="0" aria-label="Gemelo lateral derecho · Gemelos" d="M152 352 Q145 344 137 354 L141 403 Q145 418 154 412 Q159 403 157 382 Z"/>
-                </g>
-                <g class="map-detail-lines" aria-hidden="true">
-                  <path d="M120 70 L120 228 M102 82 Q120 101 138 82 M88 143 Q99 156 109 169 M152 143 Q141 156 131 169 M120 147 L120 210"/>
-                  <path d="M87 235 Q120 249 153 235 M120 250 L120 343 M95 350 L91 440 M145 350 L149 440"/>
-                  <path d="M56 166 Q66 169 73 156 M184 166 Q174 169 167 156"/>
+                  <path data-map-muscle="shoulders" d="M68 67 Q77 59 88 68 L82 91 Q72 96 64 86 Z"/>
+                  <path data-map-muscle="shoulders" d="M132 67 Q123 59 112 68 L118 91 Q128 96 136 86 Z"/>
+                  <path data-map-muscle="back" d="M88 66 Q100 60 112 66 L123 91 Q113 110 100 121 Q87 110 77 91 Z"/>
+                  <path data-map-muscle="back" d="M82 112 Q91 122 98 126 L96 168 Q87 174 78 157 L75 132 Z"/>
+                  <path data-map-muscle="back" d="M118 112 Q109 122 102 126 L104 168 Q113 174 122 157 L125 132 Z"/>
+                  <path data-map-muscle="triceps" d="M55 91 Q63 85 70 94 L62 132 Q57 140 50 134 Z"/>
+                  <path data-map-muscle="triceps" d="M145 91 Q137 85 130 94 L138 132 Q143 140 150 134 Z"/>
+                  <path data-map-muscle="hams" d="M84 194 Q92 188 98 196 L96 271 Q91 282 83 275 L81 220 Z"/>
+                  <path data-map-muscle="hams" d="M116 194 Q108 188 102 196 L104 271 Q109 282 117 275 L119 220 Z"/>
+                  <path data-map-muscle="calves" d="M82 291 Q90 285 97 294 L95 363 Q91 376 82 371 L79 330 Z"/>
+                  <path data-map-muscle="calves" d="M118 291 Q110 285 103 294 L105 363 Q109 376 118 371 L121 330 Z"/>
                 </g>
               </svg>
             </div>
           </div>
-          <div class="small muted muscle-map-note">Mapa anatómico ilustrativo con subdivisiones visibles de cada grupo. Las regiones del mismo color comparten el volumen semanal del grupo muscular correspondiente; abdomen, glúteos y antebrazos se muestran como silueta neutra porque no tienen seguimiento independiente en esta rutina.</div>
+          <div class="small muted muscle-map-note">Las zonas se colorean según tus registros. El puntaje combina series, carga movida, frecuencia y esfuerzo; los grupos sin seguimiento independiente quedan neutros.</div>
         </div>
         <div class="card muscle-detail-card"><h3 id="muscleDetailTitle">Detalle muscular</h3><p class="small muted" id="muscleDetailSub">Seleccioná un grupo en el mapa o en la lista.</p><div id="muscleDetailContent"></div></div>
       </div>
@@ -376,7 +404,7 @@ input,select,textarea{background:#fff!important;color:var(--text)!important;bord
       </div>
     </section>
   </main>
-  <footer class="footer"><span>Hipertrofia Tracker V6 · Instalable y optimizado para celular</span><span>Los datos se guardan localmente en este navegador y dispositivo.</span></footer>
+  <footer class="footer"><span>Hipertrofia Tracker V8 · Instalable y optimizado para celular</span><span>Los datos se guardan localmente en este navegador y dispositivo.</span></footer>
 
 <div class="modal-overlay hidden" id="sessionSummaryModal" role="dialog" aria-modal="true" aria-labelledby="sessionSummaryTitle">
   <div class="modal-panel session-summary-panel">
@@ -688,28 +716,145 @@ function closeSessionSummary(){ $('sessionSummaryModal').classList.add('hidden')
 $('closeSessionSummary').addEventListener('click',closeSessionSummary);$('sessionSummaryDone').addEventListener('click',closeSessionSummary);$('sessionSummaryModal').addEventListener('click',e=>{if(e.target===$('sessionSummaryModal'))closeSessionSummary();});$('sessionSummaryProgress').addEventListener('click',()=>{closeSessionSummary();setTab('progress');});
 $('finishWorkout').addEventListener('click',()=>{const w=state.activeWorkout;if(!w)return;const {done,total}=liveSetCount();if(!done){alert('Todavía no completaste ninguna serie. Marcá al menos una para guardar la sesión.');return;}if(done<total&&!confirm(`Completaste ${done} de ${total} series. ¿Guardar igualmente lo realizado?`))return;const sessionId=w.id;let savedCount=0,sessionVolume=0;for(const ex of w.exercises){const completed=ex.sets.filter(x=>x.done).map(x=>({weight:Number(x.weight),reps:Number(x.reps),rir:x.rir||''}));if(!completed.length)continue;const first=completed[0];sessionVolume+=completed.reduce((n,x)=>n+x.weight*x.reps,0);state.logs.push({id:(crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random()),date:w.date,day:w.dayId,exerciseId:ex.exerciseId,weight:first.weight,reps:completed.map(x=>x.reps),sets:completed,rir:first.rir||'',notes:'Entrenamiento en vivo',sessionId,createdAt:new Date().toISOString()});savedCount++;}const finishedAt=new Date().toISOString(),durationSec=Math.max(0,Math.round((Date.now()-new Date(w.startedAt).getTime())/1000));state.sessions=Array.isArray(state.sessions)?state.sessions:[];state.sessions.push({id:sessionId,date:w.date,dayId:w.dayId,startedAt:w.startedAt,finishedAt,durationSec,sets:done,exercises:savedCount,volumeKg:sessionVolume});state.activeWorkout=null;stopRestTimer(false);if(liveClockInterval){clearInterval(liveClockInterval);liveClockInterval=null;}save();renderAll();setTab('home');const durationText=`${Math.floor(durationSec/60)} min`;$('sessionSummaryMeta').textContent=`${liveDayLabel(w.dayId)} · ${fmtDate(w.date)}`;$('sessionSummaryKpis').innerHTML=[['Duración',durationText],['Series completadas',done],['Ejercicios',savedCount],['Volumen total',Math.round(sessionVolume).toLocaleString('es-AR')+' kg']].map(x=>`<div class="session-stat"><strong>${x[1]}</strong><span>${x[0]}</span></div>`).join('');$('sessionSummaryNote').textContent=`Se guardó tu sesión con ${done} series en ${savedCount} ejercicios. El volumen es la suma de carga × repeticiones; no incluye el peso corporal si registraste 0 kg.`;$('sessionSummaryModal').classList.remove('hidden');});
 
-// --- Estadísticas musculares: series terminadas de la semana ISO actual ---
+// --- Mapa muscular y puntaje corporal V8 ---
 let selectedMuscle='chest';
-function weeklyMuscleTotals(){
- const period=$('musclePeriod')?.value||'week',today=localToday();let start=today,label='Semana actual';
- if(period==='week'){const d=new Date(today+'T12:00:00'),dow=(d.getDay()+6)%7;d.setDate(d.getDate()-dow);start=new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);label='Semana actual';}
- else {const days=Number(period);start=dateDaysAgo(days-1);label=`Últimos ${days} días`;}
- const totals=Object.fromEntries(muscles.map(m=>[m.id,0]));let all=0;
- for(const log of state.logs){if(log.date<start||log.date>today)continue;const muscle=byId(log.exerciseId).muscle;if(!Object.prototype.hasOwnProperty.call(totals,muscle))continue;const count=logSetCount(log);totals[muscle]+=count;all+=count;}
- return {period,start,today,label,totals,all};
+let muscleMapMode='score';
+const musclePalette=['#e5e9e6','#d3e6da','#acd5bd','#78bd96','#419b70','#176b50'];
+function musclePeriodWindow(){
+ const period=$('musclePeriod')?.value||'week',today=localToday();let start=today,label='Semana actual',days=7;
+ if(period==='week'){
+  const d=new Date(today+'T12:00:00'),dow=(d.getDay()+6)%7;d.setDate(d.getDate()-dow);
+  start=new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);
+  days=Math.max(1,Math.floor((new Date(today+'T12:00:00')-new Date(start+'T12:00:00'))/86400000)+1);
+ }else{days=Number(period);start=dateDaysAgo(days-1);label=`Últimos ${days} días`;}
+ return {period,start,today,label,days};
+}
+function newMuscleMetric(){return {sets:0,volume:0,reps:0,sessions:new Set(),rir:[],activeWeeks:new Set()};}
+function addLogToMetric(metric,log){
+ const sets=Array.isArray(log.sets)&&log.sets.length?log.sets:null;
+ metric.sets+=logSetCount(log);
+ metric.volume+=logVolume(log);
+ const reps=sets?sets.reduce((n,x)=>n+(Number(x.reps)||0),0):repsArray(log).reduce((n,x)=>n+(Number(x)||0),0);
+ metric.reps+=reps;
+ metric.sessions.add(log.sessionId||`${log.date}_${log.day||''}`);
+ const d=new Date((log.date||localToday())+'T12:00:00');
+ const monday=new Date(d);monday.setDate(monday.getDate()-((monday.getDay()+6)%7));
+ metric.activeWeeks.add(monday.toISOString().slice(0,10));
+ const rirValues=sets?sets.map(x=>x.rir):[log.rir];
+ for(const raw of rirValues){if(raw===''||raw==null)continue;const n=Number.parseFloat(String(raw));if(Number.isFinite(n))metric.rir.push(Math.min(6,Math.max(0,n)));}
+}
+function collectMuscleMetrics(start,today){
+ const current=Object.fromEntries(muscles.map(m=>[m.id,newMuscleMetric()]));
+ const history=Object.fromEntries(muscles.map(m=>[m.id,newMuscleMetric()]));
+ const historyStart=dateDaysAgo(89);
+ for(const log of state.logs||[]){
+  const muscle=byId(log.exerciseId).muscle;if(!current[muscle])continue;
+  if(log.date>=historyStart&&log.date<=today)addLogToMetric(history[muscle],log);
+  if(log.date>=start&&log.date<=today)addLogToMetric(current[muscle],log);
+ }
+ return {current,history};
+}
+function clampScore(n){return Math.max(0,Math.min(100,Math.round(n)));}
+function calculateMuscleScore(id,metric,hist,periodDays){
+ const target=muscleTargetForPeriod(id,$('musclePeriod')?.value||'week');
+ const setScore=target?clampScore(metric.sets/target*100):0;
+ const activeWeeks=Math.max(1,hist.activeWeeks.size);
+ const baseline=hist.volume/activeWeeks;
+ const currentWeekly=metric.volume/(periodDays/7);
+ const loadScore=metric.sets?clampScore(baseline>0?Math.min(100,currentWeekly/baseline*100):60):0;
+ const sessionsPerWeek=metric.sessions.size/(periodDays/7);
+ const frequencyScore=clampScore(Math.min(1,sessionsPerWeek/2)*100);
+ const effortScore=metric.sets?(metric.rir.length?clampScore(metric.rir.reduce((a,b)=>a+(6-b)/6*100,0)/metric.rir.length):65):0;
+ const score=clampScore(setScore*.50+loadScore*.25+frequencyScore*.15+effortScore*.10);
+ return {score,setScore,loadScore,frequencyScore,effortScore,target,baseline,currentWeekly};
+}
+function scoreColor(score){
+ if(score<=0)return musclePalette[0];
+ const index=Math.min(5,Math.max(1,Math.ceil(score/20)));
+ return musclePalette[index];
+}
+function frequencyColor(sessions,periodDays){
+ const perWeek=sessions/(periodDays/7);
+ const index=perWeek<0.5?0:perWeek<1.5?1:perWeek<2.5?2:perWeek<3.5?3:perWeek<4.5?4:5;
+ return musclePalette[index];
+}
+function renderMuscleLegend(){
+ const legend=$('muscleMapLegend');if(!legend)return;
+ if(muscleMapMode==='frequency'){
+  legend.innerHTML=[['0',0],['1',1],['2',2],['3',3],['4+',5]].map((x)=>`<span><i class="legend-swatch" style="background:${musclePalette[x[1]]}"></i>${x[0]}</span>`).join('');
+ }else{
+  legend.innerHTML=[['Bajo',musclePalette[1]],['Medio',musclePalette[3]],['Alto',musclePalette[5]]].map(x=>`<span><i class="legend-swatch" style="background:${x[1]}"></i>${x[0]}</span>`).join('');
+ }
+}
+function renderBodyScore(metrics,history,windowInfo){
+ const {current}=metrics;let weighted=0,weights=0,sets=0,volume=0,activeSessions=new Set(),loadSum=0,loadN=0,effortSum=0,effortN=0;
+ const muscleScores={};
+ for(const m of muscles){
+  const metric=current[m.id],hist=history[m.id],score=calculateMuscleScore(m.id,metric,hist,windowInfo.days);
+  muscleScores[m.id]=score;const weight=Math.max(1,Number(state.targets[m.id])||1);
+  weighted+=score.score*weight;weights+=weight;sets+=metric.sets;volume+=metric.volume;
+  for(const session of metric.sessions)activeSessions.add(session);
+  if(metric.sets){loadSum+=score.loadScore;loadN++;effortSum+=score.effortScore;effortN++;}
+ }
+ const bodyScore=weights&&sets?clampScore(weighted/weights):null;
+ const goals=muscles.reduce((n,m)=>n+muscleTargetForPeriod(m.id,windowInfo.period),0);
+ const setScore=goals?clampScore(sets/goals*100):0;
+ const activeMuscleLoad=loadN?clampScore(loadSum/loadN):0;
+ const expectedSessions=Math.max(1,Math.ceil(windowInfo.days/7*3));
+ const consistency=clampScore(Math.min(1,activeSessions.size/expectedSessions)*100);
+ const effort=effortN?clampScore(effortSum/effortN):0;
+ const $score=$('bodyScoreValue');$score.textContent=bodyScore===null?'—':bodyScore;
+ $('bodyScoreBar').style.width=(bodyScore||0)+'%';
+ $('bodyScoreComponents').innerHTML=[['Series',setScore],['Carga',activeMuscleLoad],['Constancia',consistency],['Esfuerzo',effort]].map(x=>`<div class="body-score-component"><strong>${bodyScore===null?'—':x[1]+'%'}</strong><span>${x[0]}</span></div>`).join('');
+ return {bodyScore,muscleScores,sets,volume,activeSessions:activeSessions.size};
 }
 function muscleTargetForPeriod(id,period){const weekly=Math.max(0,Number(state.targets[id])||0);return period==='week'?weekly:Math.round(weekly*Number(period)/7);}
-function musclePercent(id,totals,period){const target=muscleTargetForPeriod(id,period);return target?Math.min(100,Math.round((totals[id]/target)*100)):0;}
-function muscleFill(id,totals,period){const n=totals[id]||0,target=muscleTargetForPeriod(id,period);if(!n)return 'var(--figure)';return target&&n>=target?'var(--accent2)':'var(--accent)';}
-function renderMuscleMap(){if(!$('muscleVolumeList'))return;const {period,start,today,label,totals,all}=weeklyMuscleTotals();$('muscleWeekLabel').textContent=label;$('muscleTotalSets').textContent=all+' series';$('muscleVolumeSub').textContent=`Registros entre ${fmtDate(start)} y ${fmtDate(today)}. Solo cuenta el músculo principal asignado al ejercicio.`;const goals=muscles.reduce((n,m)=>n+muscleTargetForPeriod(m.id,period),0);const reached=muscles.filter(m=>muscleTargetForPeriod(m.id,period)>0&&totals[m.id]>=muscleTargetForPeriod(m.id,period)).length;$('muscleKpis').innerHTML=[['Series completadas',all,label],['Objetivos alcanzados',reached+'/'+muscles.filter(m=>muscleTargetForPeriod(m.id,period)>0).length,'Grupos musculares'],['Objetivo equivalente',goals,'Series estimadas del período']].map(k=>`<div class="card"><div class="kpi-label">${k[0]}</div><div class="kpi-value">${k[1]}</div><div class="kpi-note">${k[2]}</div></div>`).join('');
- document.querySelectorAll('[data-map-muscle]').forEach(el=>{const id=el.dataset.mapMuscle;el.style.fill=muscleFill(id,totals,period);el.classList.toggle('active',id===selectedMuscle);el.setAttribute('aria-label',muscles.find(m=>m.id===id)?.name||id);});
- $('muscleVolumeList').innerHTML=muscles.map(m=>{const target=muscleTargetForPeriod(m.id,period),p=musclePercent(m.id,totals,period);return `<button class="muscle-pick ${selectedMuscle===m.id?'selected':''}" data-muscle-pick="${m.id}" type="button"><strong>${esc(m.name)}</strong><span>${totals[m.id]}/${target} series</span></button><div class="muscle-volume-bar"><span style="width:${target?Math.min(100,p):0}%"></span></div><span class="muscle-volume-value">${target?p+'%':'Sin objetivo'}</span>`;}).join('');
- const m=muscles.find(x=>x.id===selectedMuscle)||muscles[0],val=totals[m.id]||0,target=muscleTargetForPeriod(m.id,period),p=target?Math.min(100,Math.round(val/target*100)):0,remaining=Math.max(0,target-val);$('muscleDetailTitle').textContent=m.name;$('muscleDetailSub').textContent='Volumen directo registrado: '+label.toLocaleLowerCase()+'.';$('muscleDetailContent').innerHTML=`<div class="muscle-detail-big">${val} <span class="small muted" style="font-size:13px;font-weight:600">/ ${target} series</span></div><div class="muscle-progress"><span style="width:${p}%"></span></div><div class="record-row small"><span class="muted">Objetivo equivalente</span><strong>${target} series</strong></div><div class="record-row small" style="margin-top:8px"><span class="muted">${remaining?'Faltan para el objetivo':'Estado'}</span><strong>${target?(remaining?remaining+' series':'Objetivo alcanzado'):'Sin objetivo configurado'}</strong></div><div class="notice">El objetivo se calcula convirtiendo tu meta semanal al período seleccionado. Solo se suman series directas/principales; los estímulos secundarios no se contabilizan para evitar duplicaciones.</div>`;
+function renderMuscleMap(){
+ if(!$('muscleVolumeList'))return;
+ const windowInfo=musclePeriodWindow(),{current,history}=collectMuscleMetrics(windowInfo.start,windowInfo.today);
+ $('muscleWeekLabel').textContent=windowInfo.label;
+ const summary=renderBodyScore({current,history},history,windowInfo);
+ $('muscleTotalSets').textContent=summary.sets+' series';
+ $('muscleVolumeSub').textContent=`Carga total: ${Math.round(summary.volume).toLocaleString('es-AR')} kg·reps. Registros del período; el peso externo no contempla carga corporal.`;
+ $('muscleKpis').innerHTML=[
+  ['Series completadas',summary.sets,windowInfo.label],
+  ['Carga movida',Math.round(summary.volume).toLocaleString('es-AR'),'kg × repeticiones'],
+  ['Sesiones',summary.activeSessions,'Con registros musculares']
+ ].map(k=>`<div class="card"><div class="kpi-label">${k[0]}</div><div class="kpi-value">${k[1]}</div><div class="kpi-note">${k[2]}</div></div>`).join('');
+ renderMuscleLegend();
+ document.querySelectorAll('[data-map-mode]').forEach(b=>{const active=b.dataset.mapMode===muscleMapMode;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+ document.querySelectorAll('[data-map-muscle]').forEach(el=>{
+  const id=el.dataset.mapMuscle,metric=current[id]||newMuscleMetric(),color=muscleMapMode==='frequency'?frequencyColor(metric.sessions.size,windowInfo.days):scoreColor(summary.muscleScores[id]?.score||0);
+  el.style.fill=color;el.classList.toggle('active',id===selectedMuscle);
+  el.setAttribute('role','button');el.setAttribute('tabindex','0');el.setAttribute('aria-label',`${muscles.find(m=>m.id===id)?.name||id}: ${metric.sets} series, puntaje ${summary.muscleScores[id]?.score||0} de 100`);
+ });
+ $('muscleVolumeList').innerHTML=muscles.map(m=>{
+  const metric=current[m.id],score=summary.muscleScores[m.id],target=score.target;
+  const value=muscleMapMode==='frequency'?`${metric.sessions.size} ses.`:`${score.score}/100`;
+  const pct=muscleMapMode==='frequency'?Math.min(100,(metric.sessions.size/(windowInfo.days/7*2))*100):score.score;
+  return `<button class="muscle-pick ${selectedMuscle===m.id?'selected':''}" data-muscle-pick="${m.id}" type="button"><strong>${esc(m.name)}</strong><span>${value}</span></button><div class="muscle-volume-bar"><span style="width:${pct}%"></span></div><span class="muscle-volume-value">${metric.sets}/${target} series</span>`;
+ }).join('');
+ const m=muscles.find(x=>x.id===selectedMuscle)||muscles[0],metric=current[m.id],score=summary.muscleScores[m.id],remaining=Math.max(0,score.target-metric.sets);
+ const avgLoad=metric.reps?Math.round(metric.volume/metric.reps*10)/10:0;
+ $('muscleDetailTitle').textContent=m.name;
+ $('muscleDetailSub').textContent=`Resumen de ${windowInfo.label.toLocaleLowerCase()}.`;
+ $('muscleDetailContent').innerHTML=`
+  <div class="muscle-detail-big">${score.score}<span class="small muted" style="font-size:13px;font-weight:600"> / 100 puntos</span></div>
+  <div class="muscle-progress"><span style="width:${score.score}%;background:${scoreColor(score.score)}"></span></div>
+  <div class="record-row small"><span class="muted">Series completadas</span><strong>${metric.sets} / ${score.target}</strong></div>
+  <div class="record-row small" style="margin-top:8px"><span class="muted">Carga registrada</span><strong>${Math.round(metric.volume).toLocaleString('es-AR')} kg·reps</strong></div>
+  <div class="record-row small" style="margin-top:8px"><span class="muted">Peso medio registrado</span><strong>${avgLoad.toLocaleString('es-AR')} kg</strong></div>
+  <div class="record-row small" style="margin-top:8px"><span class="muted">Frecuencia</span><strong>${metric.sessions.size} sesiones</strong></div>
+  <div class="record-row small" style="margin-top:8px"><span class="muted">Para el objetivo</span><strong>${score.target?(remaining?`Faltan ${remaining} series`:'Objetivo alcanzado'):'Sin objetivo configurado'}</strong></div>
+  <div class="notice">Puntaje del grupo: 50% cumplimiento de series, 25% carga relativa a tu propio historial, 15% frecuencia y 10% esfuerzo (RIR, cuando lo registrás). No compara tu fuerza con la de otras personas.</div>`;
  document.querySelectorAll('[data-muscle-pick]').forEach(b=>b.addEventListener('click',()=>{selectedMuscle=b.dataset.musclePick;renderMuscleMap();}));
 }
 $('musclePeriod').addEventListener('change',renderMuscleMap);
-
-document.querySelectorAll('[data-map-muscle]').forEach(el=>{el.addEventListener('click',()=>{selectedMuscle=el.dataset.mapMuscle;renderMuscleMap();});el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectedMuscle=el.dataset.mapMuscle;renderMuscleMap();}});});
+document.querySelectorAll('[data-map-mode]').forEach(b=>b.addEventListener('click',()=>{muscleMapMode=b.dataset.mapMode;renderMuscleMap();}));
+document.querySelectorAll('[data-map-muscle]').forEach(el=>{
+ el.addEventListener('click',()=>{selectedMuscle=el.dataset.mapMuscle;renderMuscleMap();});
+ el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectedMuscle=el.dataset.mapMuscle;renderMuscleMap();}});
+});
 
 function renderAll(){applyTheme(state.settings?.theme||'navy');renderHome();renderRoutine();renderDayOptions();renderRecent();renderTargets();renderProgress();renderLive();renderMuscleMap();renderSettings();}
 renderAll();

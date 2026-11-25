@@ -1,5 +1,11 @@
-Hipertrofia Tracker V7
+HIPERTROFIA TRACKER V8 · PAQUETE INSTALABLE
 
-Extraé esta carpeta y publicá su contenido en la misma dirección web donde usabas V6 para conservar el almacenamiento local del navegador. Antes de actualizar, exportá un backup desde V6 como precaución. La V7 conserva la clave localStorage rutina_hipertrofia_tracker_v1 y el formato de datos V6.
+Contenido: index.html, manifest.webmanifest, sw.js e iconos PWA.
 
-Para probar localmente, abrí index.html. Para instalar como PWA y usar service worker, publicá los archivos en un hosting HTTPS.
+Para usarlo online: publicá el contenido de esta carpeta en la misma URL/origen donde usabas la V7 para que el navegador conserve el almacenamiento local.
+
+Antes de actualizar: abrí Ajustes > Descargar backup.
+
+Los datos se guardan en este navegador y dispositivo. La versión móvil y una futura app de Windows no comparten datos automáticamente; para moverlos, usá el backup.
+
+Para instalar: abrí la URL publicada en Chrome/Edge y usá la opción Instalar aplicación cuando esté disponible.
