@@ -1,40 +1,33 @@
-ACTUALIZACIÓN V3 — RUTINA DE HIPERTROFIA TRACKER
+HIPERTROFIA TRACKER — V6
 
-Archivos incluidos:
-- index.html: aplicación actualizada.
-- manifest.webmanifest: configuración PWA.
-- sw.js: caché offline (v3; fuerza a descargar la nueva versión).
-- icon-192.png e icon-512.png: iconos.
+CONTENIDO
+- index.html: aplicación web V6.
+- manifest.webmanifest: configuración instalable (PWA).
+- sw.js: caché offline V6; reemplaza la caché de V5.
+- icon-192.png e icon-512.png: iconos de la aplicación.
 
-NOVEDADES
-1. Entrenamiento en vivo: elegí un día, cargá peso y repeticiones serie por serie, marcá las series realizadas, usá el temporizador y guardá la sesión en el historial. La sesión activa se conserva al cerrar o recargar la app.
-2. Mapa muscular: muestra series efectivamente registradas durante la semana actual frente al objetivo semanal. Podés tocar una región del mapa o un músculo de la lista para ver el detalle.
-3. Temas: Azul marino, Sepia, Claro y Grafito.
-4. Temporizador de descanso configurable desde Ajustes.
+NOVEDADES V6
+1. Diseño mobile-first con navegación inferior y menú Más.
+2. Entrenamiento en vivo: carga, repeticiones, RIR por serie, referencia de la sesión anterior, temporizador de descanso y tiempo total de sesión.
+3. Resumen al terminar: duración, series, ejercicios y volumen total registrado.
+4. Asistente de progresión basado en carga, repeticiones y RIR guardados. Sus sugerencias son orientativas y transparentes.
+5. Gráficos de progresión configurables: carga, 1RM estimado, volumen por sesión y repeticiones totales; filtros de 30, 90 días o historial completo.
+6. Estadísticas musculares por semana actual, últimos 7, 30 o 90 días.
+7. Panel de inicio con sesiones, series, volumen y récords de la semana.
+8. Se conserva el mapa anatómico detallado, la biblioteca de ejercicios, las rutinas editables, los temas, el historial, el guardado local y las exportaciones.
 
 ACTUALIZAR GITHUB PAGES
-1. Hacé una copia de seguridad desde Ajustes > Copias y datos.
+1. Antes de actualizar, descargá un backup desde Ajustes > Copias y datos.
 2. Extraé este ZIP.
-3. En el repositorio GitHub, usá Add file > Upload files.
-4. Subí los archivos que están dentro de Tracker_PWA directamente a la raíz del repositorio y confirmá el commit.
-5. Abrí la URL de GitHub Pages. El service worker v3 reemplaza la caché anterior. Si la PWA muestra la versión vieja, cerrala completamente y abrila de nuevo; si hace falta, recargá la URL en Chrome.
+3. En tu repositorio de GitHub Pages, reemplazá los archivos de la raíz con los archivos que están dentro de esta carpeta Tracker_PWA_V6.
+4. Confirmá el commit y abrí la URL de GitHub Pages.
+5. El service worker usa la caché hipertrofia-tracker-v6 y elimina la caché anterior al activarse. Si todavía ves V5, cerrá la PWA por completo y volvé a abrirla o recargá la página.
 
-COMPATIBILIDAD DE DATOS
-Se mantiene la misma clave localStorage (rutina_hipertrofia_tracker_v1), para conservar registros, objetivos, ejercicios y variantes anteriores. El backup JSON ahora también incluye tema, preferencia de descanso y una sesión activa si la hubiera.
+COMPATIBILIDAD Y DATOS
+- Se mantiene la clave localStorage "rutina_hipertrofia_tracker_v1" para conservar registros, objetivos, ejercicios personalizados y preferencias guardadas en ese mismo navegador/dispositivo.
+- Los backups de V5 se pueden importar desde Ajustes > Restaurar backup. Las sesiones históricas de V5 se mantienen; V6 añade resúmenes para las sesiones nuevas terminadas desde el modo En vivo.
+- Los datos continúan almacenándose localmente. Para transferirlos a otro dispositivo, exportá el backup JSON en el dispositivo anterior e importalo en el nuevo.
+- Las métricas de volumen usan carga × repeticiones. Si registrás peso corporal como 0 kg, ese volumen no incluye tu masa corporal.
 
-NOTA
-Los datos se guardan localmente en el navegador/dispositivo. Para transferirlos entre dispositivos, exportá e importá un backup.
-
-
-Actualización V4 – mapa muscular corregido
-- Silueta frontal y posterior rehecha con proporciones más claras.
-- Zonas anatómicas ubicadas según vista: pecho, bíceps y cuádriceps al frente; espalda, tríceps, isquiotibiales y gemelos atrás; hombros en ambas vistas.
-- Zonas seleccionables también con teclado.
-- Caché de PWA actualizado a v4.
-
-
-Actualización V5 – mapa anatómico detallado
-- Vista frontal con subdivisiones de deltoides, pectorales, bíceps y cuádriceps.
-- Vista posterior con subdivisiones de deltoides, trapecio, dorsales, erectores, tríceps, isquiotibiales y gemelos.
-- Las subdivisiones comparten el seguimiento de su grupo muscular principal.
-- Se actualizó la caché PWA a v5.
+IMPORTANTE
+El análisis de progreso no es un diagnóstico médico ni una recomendación automática de entrenamiento. Revisá técnica, recuperación y contexto antes de modificar cargas o volumen.

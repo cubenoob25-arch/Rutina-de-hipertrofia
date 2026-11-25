@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Rutina de Hipertrofia - Tracker",
-  "short_name": "Rutina Tracker",
-  "description": "Rutina de hipertrofia de 5 días con entrenamiento en vivo, mapa muscular, registro de cargas y progresión.",
+  "name": "Hipertrofia Tracker - V6",
+  "short_name": "Hipertrofia V6",
+  "description": "Tracker profesional de hipertrofia: entrenamiento en vivo, progresión, análisis muscular y estadísticas.",
   "lang": "es-AR",
   "start_url": "./",
   "scope": "./",
