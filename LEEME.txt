@@ -31,3 +31,10 @@ Actualización V4 – mapa muscular corregido
 - Zonas anatómicas ubicadas según vista: pecho, bíceps y cuádriceps al frente; espalda, tríceps, isquiotibiales y gemelos atrás; hombros en ambas vistas.
 - Zonas seleccionables también con teclado.
 - Caché de PWA actualizado a v4.
+
+
+Actualización V5 – mapa anatómico detallado
+- Vista frontal con subdivisiones de deltoides, pectorales, bíceps y cuádriceps.
+- Vista posterior con subdivisiones de deltoides, trapecio, dorsales, erectores, tríceps, isquiotibiales y gemelos.
+- Las subdivisiones comparten el seguimiento de su grupo muscular principal.
+- Se actualizó la caché PWA a v5.
