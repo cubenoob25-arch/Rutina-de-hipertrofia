@@ -1,37 +1,26 @@
-RUTINA DE HIPERTROFIA - VERSIÓN INSTALABLE (PWA)
+ACTUALIZACIÓN V3 — RUTINA DE HIPERTROFIA TRACKER
 
-IMPORTANTE
-Esta carpeta convierte el tracker HTML en una aplicación web instalable (PWA). Para instalarla desde Chrome en Android, primero tiene que estar publicada en una dirección HTTPS. Abrir index.html directamente desde Descargas no alcanza para instalarla como app ni para activar el modo sin conexión.
+Archivos incluidos:
+- index.html: aplicación actualizada.
+- manifest.webmanifest: configuración PWA.
+- sw.js: caché offline (v3; fuerza a descargar la nueva versión).
+- icon-192.png e icon-512.png: iconos.
 
-PUBLICAR GRATIS CON GITHUB PAGES
-1. Ingresá a https://github.com/ y creá una cuenta o iniciá sesión.
-2. Creá un repositorio nuevo, por ejemplo: rutina-hipertrofia.
-3. Subí al nivel principal del repositorio TODOS los archivos de esta carpeta:
-   - index.html
-   - manifest.webmanifest
-   - sw.js
-   - icon-192.png
-   - icon-512.png
-4. En el repositorio, abrí Settings > Pages.
-5. En Build and deployment, elegí Deploy from a branch.
-6. Seleccioná la rama main y la carpeta /(root), y guardá.
-7. GitHub Pages mostrará la dirección pública del sitio. Abrila desde Chrome en el Android.
-8. En Chrome, tocá el menú ⋮ y elegí "Instalar aplicación" o "Agregar a pantalla principal".
-9. Confirmá. La app aparecerá en la pantalla de inicio y se abrirá en una ventana independiente.
+NOVEDADES
+1. Entrenamiento en vivo: elegí un día, cargá peso y repeticiones serie por serie, marcá las series realizadas, usá el temporizador y guardá la sesión en el historial. La sesión activa se conserva al cerrar o recargar la app.
+2. Mapa muscular: muestra series efectivamente registradas durante la semana actual frente al objetivo semanal. Podés tocar una región del mapa o un músculo de la lista para ver el detalle.
+3. Temas: Azul marino, Sepia, Claro y Grafito.
+4. Temporizador de descanso configurable desde Ajustes.
 
-USO SIN CONEXIÓN
-Después de abrir la app publicada al menos una vez con internet, el service worker guarda los archivos principales para que la interfaz pueda abrirse sin conexión.
+ACTUALIZAR GITHUB PAGES
+1. Hacé una copia de seguridad desde Ajustes > Copias y datos.
+2. Extraé este ZIP.
+3. En el repositorio GitHub, usá Add file > Upload files.
+4. Subí los archivos que están dentro de Tracker_PWA directamente a la raíz del repositorio y confirmá el commit.
+5. Abrí la URL de GitHub Pages. El service worker v3 reemplaza la caché anterior. Si la PWA muestra la versión vieja, cerrala completamente y abrila de nuevo; si hace falta, recargá la URL en Chrome.
 
-DATOS Y RESPALDOS
-Los registros se guardan localmente en el navegador/dispositivo. No se sincronizan automáticamente entre PC y celular. Usá el botón "Backup" dentro de la app para exportar un respaldo JSON y "Restaurar backup" en el otro dispositivo para transferirlo. Guardá copias periódicamente.
+COMPATIBILIDAD DE DATOS
+Se mantiene la misma clave localStorage (rutina_hipertrofia_tracker_v1), para conservar registros, objetivos, ejercicios y variantes anteriores. El backup JSON ahora también incluye tema, preferencia de descanso y una sesión activa si la hubiera.
 
-NO ES UN APK NATIVO
-Es una PWA: queda instalada desde Chrome y se comporta como una app, sin pasar por Play Store. Un APK nativo requeriría empaquetarla y firmarla por separado.
-
-
-NOVEDADES DE ESTA VERSION
-- En Rutina, tocá el nombre de un ejercicio para abrir la biblioteca de variantes del mismo grupo muscular.
-- Podés buscar por nombre/equipamiento y sustituir el ejercicio de ese día.
-- Podés crear variantes personalizadas; quedan guardadas en el dispositivo y se incluyen en el backup JSON.
-- Los registros anteriores no se borran al cambiar un ejercicio y siguen apareciendo en Progresión.
-- Después de subir esta versión a GitHub Pages, abrí la aplicación instalada con conexión y recargala una vez para que se actualice el modo offline.
+NOTA
+Los datos se guardan localmente en el navegador/dispositivo. Para transferirlos entre dispositivos, exportá e importá un backup.
