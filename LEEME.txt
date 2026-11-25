@@ -1,33 +1,5 @@
-HIPERTROFIA TRACKER — V6
+Hipertrofia Tracker V7
 
-CONTENIDO
-- index.html: aplicación web V6.
-- manifest.webmanifest: configuración instalable (PWA).
-- sw.js: caché offline V6; reemplaza la caché de V5.
-- icon-192.png e icon-512.png: iconos de la aplicación.
+Extraé esta carpeta y publicá su contenido en la misma dirección web donde usabas V6 para conservar el almacenamiento local del navegador. Antes de actualizar, exportá un backup desde V6 como precaución. La V7 conserva la clave localStorage rutina_hipertrofia_tracker_v1 y el formato de datos V6.
 
-NOVEDADES V6
-1. Diseño mobile-first con navegación inferior y menú Más.
-2. Entrenamiento en vivo: carga, repeticiones, RIR por serie, referencia de la sesión anterior, temporizador de descanso y tiempo total de sesión.
-3. Resumen al terminar: duración, series, ejercicios y volumen total registrado.
-4. Asistente de progresión basado en carga, repeticiones y RIR guardados. Sus sugerencias son orientativas y transparentes.
-5. Gráficos de progresión configurables: carga, 1RM estimado, volumen por sesión y repeticiones totales; filtros de 30, 90 días o historial completo.
-6. Estadísticas musculares por semana actual, últimos 7, 30 o 90 días.
-7. Panel de inicio con sesiones, series, volumen y récords de la semana.
-8. Se conserva el mapa anatómico detallado, la biblioteca de ejercicios, las rutinas editables, los temas, el historial, el guardado local y las exportaciones.
-
-ACTUALIZAR GITHUB PAGES
-1. Antes de actualizar, descargá un backup desde Ajustes > Copias y datos.
-2. Extraé este ZIP.
-3. En tu repositorio de GitHub Pages, reemplazá los archivos de la raíz con los archivos que están dentro de esta carpeta Tracker_PWA_V6.
-4. Confirmá el commit y abrí la URL de GitHub Pages.
-5. El service worker usa la caché hipertrofia-tracker-v6 y elimina la caché anterior al activarse. Si todavía ves V5, cerrá la PWA por completo y volvé a abrirla o recargá la página.
-
-COMPATIBILIDAD Y DATOS
-- Se mantiene la clave localStorage "rutina_hipertrofia_tracker_v1" para conservar registros, objetivos, ejercicios personalizados y preferencias guardadas en ese mismo navegador/dispositivo.
-- Los backups de V5 se pueden importar desde Ajustes > Restaurar backup. Las sesiones históricas de V5 se mantienen; V6 añade resúmenes para las sesiones nuevas terminadas desde el modo En vivo.
-- Los datos continúan almacenándose localmente. Para transferirlos a otro dispositivo, exportá el backup JSON en el dispositivo anterior e importalo en el nuevo.
-- Las métricas de volumen usan carga × repeticiones. Si registrás peso corporal como 0 kg, ese volumen no incluye tu masa corporal.
-
-IMPORTANTE
-El análisis de progreso no es un diagnóstico médico ni una recomendación automática de entrenamiento. Revisá técnica, recuperación y contexto antes de modificar cargas o volumen.
+Para probar localmente, abrí index.html. Para instalar como PWA y usar service worker, publicá los archivos en un hosting HTTPS.
