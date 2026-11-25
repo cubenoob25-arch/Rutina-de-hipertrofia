@@ -1,0 +1,29 @@
+RUTINA DE HIPERTROFIA - VERSIÓN INSTALABLE (PWA)
+
+IMPORTANTE
+Esta carpeta convierte el tracker HTML en una aplicación web instalable (PWA). Para instalarla desde Chrome en Android, primero tiene que estar publicada en una dirección HTTPS. Abrir index.html directamente desde Descargas no alcanza para instalarla como app ni para activar el modo sin conexión.
+
+PUBLICAR GRATIS CON GITHUB PAGES
+1. Ingresá a https://github.com/ y creá una cuenta o iniciá sesión.
+2. Creá un repositorio nuevo, por ejemplo: rutina-hipertrofia.
+3. Subí al nivel principal del repositorio TODOS los archivos de esta carpeta:
+   - index.html
+   - manifest.webmanifest
+   - sw.js
+   - icon-192.png
+   - icon-512.png
+4. En el repositorio, abrí Settings > Pages.
+5. En Build and deployment, elegí Deploy from a branch.
+6. Seleccioná la rama main y la carpeta /(root), y guardá.
+7. GitHub Pages mostrará la dirección pública del sitio. Abrila desde Chrome en el Android.
+8. En Chrome, tocá el menú ⋮ y elegí "Instalar aplicación" o "Agregar a pantalla principal".
+9. Confirmá. La app aparecerá en la pantalla de inicio y se abrirá en una ventana independiente.
+
+USO SIN CONEXIÓN
+Después de abrir la app publicada al menos una vez con internet, el service worker guarda los archivos principales para que la interfaz pueda abrirse sin conexión.
+
+DATOS Y RESPALDOS
+Los registros se guardan localmente en el navegador/dispositivo. No se sincronizan automáticamente entre PC y celular. Usá el botón "Backup" dentro de la app para exportar un respaldo JSON y "Restaurar backup" en el otro dispositivo para transferirlo. Guardá copias periódicamente.
+
+NO ES UN APK NATIVO
+Es una PWA: queda instalada desde Chrome y se comporta como una app, sin pasar por Play Store. Un APK nativo requeriría empaquetarla y firmarla por separado.

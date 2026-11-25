@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<meta name="description" content="Rutina de hipertrofia de 5 días con registro de cargas, historial y seguimiento de progresión.">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rutina Tracker">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<title>Rutina de Hipertrofia · Tracker</title>
+<style>
+:root{--bg:#0b1220;--panel:#121d2e;--panel2:#172438;--line:#27364b;--text:#eef4fb;--muted:#9cacc1;--accent:#8bc4ff;--accent2:#b5e4cb;--warn:#f5c66e;--danger:#ff9c9c;--shadow:0 12px 32px rgba(0,0,0,.22);--radius:18px}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(1000px 500px at 20% -10%,#1b3553 0%,transparent 55%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:1180px;margin:auto;padding:24px 20px 50px}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:20px}.brand{display:flex;align-items:center;gap:13px}.logo{height:45px;width:45px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#8bc4ff,#a6e4ce);color:#102035;font-size:23px;font-weight:900}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:800}.brand h1{font-size:21px;line-height:1.2;margin:2px 0 0}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:#1a2940;color:var(--text);border-radius:11px;padding:9px 13px;font-weight:700;font-size:13px;transition:.15s}.btn:hover{border-color:#6d9bc4;transform:translateY(-1px)}.btn.primary{background:var(--accent);border-color:var(--accent);color:#122238}.btn.soft{background:transparent}.btn.danger{color:var(--danger)}.save-state{font-size:12px;color:var(--muted);margin:0 0 15px;display:flex;gap:7px;align-items:center}.dot{height:7px;width:7px;border-radius:50%;background:var(--accent2);display:inline-block}.nav{display:flex;gap:7px;padding:6px;background:#101a29;border:1px solid var(--line);border-radius:14px;margin-bottom:20px;overflow-x:auto}.nav button{white-space:nowrap;color:var(--muted);border:0;background:transparent;padding:10px 15px;border-radius:10px;font-weight:750}.nav button.active{color:var(--text);background:#263a54;box-shadow:inset 0 0 0 1px #395575}.view{display:none}.view.active{display:block}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:6px 0 16px}.section-head h2{margin:0;font-size:23px;letter-spacing:-.02em}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}.grid{display:grid;gap:14px}.kpis{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:16px}.card{background:linear-gradient(180deg,rgba(22,36,56,.96),rgba(17,29,46,.96));border:1px solid var(--line);border-radius:var(--radius);padding:17px;box-shadow:var(--shadow)}.kpi-label{color:var(--muted);font-size:12px;font-weight:700}.kpi-value{font-size:29px;font-weight:850;letter-spacing:-.04em;margin-top:6px}.kpi-note{font-size:11px;color:var(--muted);margin-top:2px}.two-col{grid-template-columns:1.2fr .8fr}.card h3{margin:0 0 12px;font-size:16px}.muted{color:var(--muted)}.small{font-size:12px}.pill{display:inline-flex;align-items:center;gap:5px;border:1px solid #344b65;border-radius:999px;padding:3px 9px;font-size:11px;color:#c8d9ec;font-weight:750}.pill.good{border-color:#366c5b;color:#a9e4ca;background:#193c35}.pill.warn{border-color:#806638;color:#ffd990;background:#44361e}.pill.bad{border-color:#75454b;color:#ffc0c0;background:#43282e}.day-list{display:grid;gap:10px}.day-card{background:rgba(20,33,51,.78);border:1px solid var(--line);border-radius:15px;overflow:hidden}.day-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 15px;background:#17263a}.day-name{font-weight:850}.day-desc{font-size:12px;color:var(--muted)}.exercise-list{padding:0 14px}.exercise{display:grid;grid-template-columns:minmax(0,1fr) 70px 92px 96px;gap:12px;align-items:center;padding:12px 2px;border-bottom:1px solid rgba(54,73,97,.5)}.exercise:last-child{border-bottom:0}.exercise-name{font-weight:750}.exercise-meta{font-size:12px;color:var(--muted);margin-top:2px}.sets{font-weight:850;text-align:center;color:var(--accent2)}.reps{text-align:center;color:#d1dceb;font-size:13px}.zero{color:var(--muted);font-size:11px;text-align:center}.btn.tiny{padding:7px 9px;font-size:11px}.routine-footer{margin-top:13px;color:var(--muted);font-size:12px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:12px;color:#bdcce0;font-weight:750}.field input,.field select,.field textarea,.target-input{width:100%;color:var(--text);background:#0e1928;border:1px solid #34465e;border-radius:10px;padding:10px 11px;outline:none}.field input:focus,.field select:focus,.field textarea:focus,.target-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(139,196,255,.12)}.field textarea{min-height:72px;resize:vertical}.field.full{grid-column:1/-1}.hint{font-size:11px;color:var(--muted)}.form-actions{display:flex;align-items:center;gap:10px;margin-top:16px;flex-wrap:wrap}.notice{background:#182a3d;border:1px solid #35516d;padding:12px 14px;border-radius:12px;color:#c8d9ec;font-size:12px;margin-top:13px}.notice strong{color:#fff}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:13px}table{border-collapse:collapse;width:100%;min-width:570px;font-size:13px}th,td{padding:10px 11px;text-align:left;border-bottom:1px solid rgba(54,73,97,.58)}th{background:#17263a;color:#b9c9de;font-size:11px;text-transform:uppercase;letter-spacing:.06em}td{color:#e2eaf4}tr:last-child td{border-bottom:0}.empty{padding:22px;text-align:center;color:var(--muted);font-size:13px}.target-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.target-row{display:grid;grid-template-columns:minmax(0,1fr) 82px 82px;gap:10px;align-items:center;padding:12px;background:#132136;border:1px solid var(--line);border-radius:12px}.target-name{font-weight:750;font-size:13px}.target-sub{font-size:11px;color:var(--muted);margin-top:2px}.target-input{text-align:center;padding:8px}.target-current{text-align:center;font-weight:850;color:var(--accent2)}.target-head{display:grid;grid-template-columns:minmax(0,1fr) 82px 82px;gap:10px;padding:0 12px 7px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.07em}.chart-card{min-height:310px}.chart-wrap{width:100%;overflow:hidden}.chart-wrap svg{width:100%;height:auto;display:block}.legend{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px;margin-top:8px}.legend span:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:6px}.alert-list{display:grid;gap:9px}.alert{border:1px solid #6d5731;background:#322a1c;border-radius:12px;padding:11px 12px}.alert strong{display:block;color:#ffda9c;font-size:13px}.alert p{margin:3px 0 0;color:#d4c2a1;font-size:12px}.success-note{border:1px solid #315c51;background:#17342f;color:#bde8d4;padding:13px;border-radius:12px;font-size:13px}.record-row{display:flex;justify-content:space-between;gap:12px;align-items:center}.record-row strong{font-size:13px}.record-row .right{text-align:right}.del{color:#ffaaaa;background:transparent;border:0;font-size:12px;padding:4px}.footer{margin-top:24px;border-top:1px solid var(--line);padding-top:15px;color:#8294aa;font-size:11px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.hidden{display:none!important}
+@media(max-width:850px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.two-col{grid-template-columns:1fr}.target-list{grid-template-columns:1fr}}
+@media(max-width:560px){.app{padding:16px 12px 34px}.top{align-items:flex-start;flex-direction:column}.top-actions{width:100%}.top-actions .btn{flex:1}.brand h1{font-size:18px}.section-head{align-items:flex-start;flex-direction:column}.exercise{grid-template-columns:minmax(0,1fr) 46px 64px 75px;gap:6px;padding:10px 0}.exercise-name{font-size:12px}.exercise-meta{font-size:10px}.btn.tiny{padding:6px 5px;font-size:10px}.sets{font-size:13px}.reps{font-size:11px}.target-row,.target-head{grid-template-columns:minmax(0,1fr) 65px 65px;gap:6px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand"><div class="logo">5D</div><div><div class="eyebrow">Plan de entrenamiento</div><h1>Rutina de hipertrofia · Tracker</h1></div></div>
+    <div class="top-actions"><button class="btn soft" id="exportCsv">Exportar CSV</button><button class="btn" id="exportJson">Backup</button><button class="btn" id="importBtn">Restaurar backup</button><input class="hidden" type="file" id="importFile" accept="application/json,.json"></div>
+  </header>
+  <p class="save-state"><span class="dot"></span><span id="saveText">Tus datos se guardan en este navegador.</span></p>
+  <nav class="nav" aria-label="Secciones">
+    <button class="active" data-tab="home">Resumen</button><button data-tab="routine">Rutina</button><button data-tab="log">Registrar entrenamiento</button><button data-tab="progress">Progresión</button><button data-tab="volume">Series semanales</button>
+  </nav>
+
+  <main>
+    <section class="view active" id="view-home">
+      <div class="section-head"><div><h2>Tu seguimiento</h2><p>Controlá tus entrenamientos, cargas y evolución semana a semana.</p></div><span class="pill good">5 días · Hipertrofia</span></div>
+      <div class="grid kpis" id="kpis"></div>
+      <div class="grid two-col">
+        <div class="card"><h3>Esquema semanal</h3><div class="day-list" id="weekOverview"></div></div>
+        <div class="card"><h3>Estado de tus ejercicios</h3><div id="homeAlerts"></div><div class="notice"><strong>Cómo se evalúa el estancamiento:</strong> se necesitan al menos 5 registros del ejercicio. La alerta aparece cuando las últimas 3 sesiones no superan en más de 1,5% el mejor rendimiento estimado anterior. Es una señal orientativa, no un diagnóstico.</div></div>
+      </div>
+      <div class="routine-footer">La rutina mantiene el peso muerto rumano en ambos días de piernas, reemplazando al curl femoral sentado.</div>
+    </section>
+
+    <section class="view" id="view-routine">
+      <div class="section-head"><div><h2>Rutina semanal</h2><p>Series y repeticiones ajustables desde “Series semanales”. Registrá una sesión directamente desde cada ejercicio.</p></div><span class="pill">Series efectivas de trabajo</span></div>
+      <div class="day-list" id="routineDays"></div>
+      <div class="routine-footer">Miércoles y domingo: descanso. Las series de calentamiento no se cuentan. Trabajá generalmente dejando 1–2 repeticiones en reserva.</div>
+    </section>
+
+    <section class="view" id="view-log">
+      <div class="section-head"><div><h2>Registrar entrenamiento</h2><p>Guardá la carga utilizada y las repeticiones de cada serie para comparar sesiones.</p></div></div>
+      <div class="grid two-col">
+        <div class="card">
+          <h3>Nuevo registro</h3>
+          <form id="logForm">
+            <div class="form-grid">
+              <div class="field"><label for="logDate">Fecha</label><input id="logDate" type="date" required></div>
+              <div class="field"><label for="logDay">Día de rutina</label><select id="logDay" required></select></div>
+              <div class="field full"><label for="logExercise">Ejercicio</label><select id="logExercise" required></select></div>
+              <div class="field"><label for="logWeight">Peso utilizado (kg)</label><input id="logWeight" type="number" min="0" step="0.25" placeholder="Ej. 40" required></div>
+              <div class="field"><label for="logReps">Repeticiones por serie</label><input id="logReps" type="text" placeholder="Ej. 10, 9, 8" required></div>
+              <div class="field"><label for="logRir">RIR al terminar (opcional)</label><select id="logRir"><option value="">Sin registrar</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></div>
+              <div class="field"><label for="logNotes">Notas (opcional)</label><input id="logNotes" type="text" placeholder="Técnica, molestias, máquina…"></div>
+            </div>
+            <div class="hint" style="margin-top:10px">Anotá un peso de referencia (preferentemente el de la primera serie efectiva) y las repeticiones de cada serie separadas por coma. Ejemplo: “10, 9, 8”.</div>
+            <div class="form-actions"><button class="btn primary" type="submit">Guardar registro</button><button class="btn soft" type="reset">Limpiar</button></div>
+          </form>
+          <div class="notice">El registro queda asociado al ejercicio y a la fecha. Los ejercicios repetidos (por ejemplo, extensiones o peso muerto rumano) comparten su historial de progresión.</div>
+        </div>
+        <div class="card"><h3>Últimos registros</h3><div id="recentLogs"></div></div>
+      </div>
+    </section>
+
+    <section class="view" id="view-progress">
+      <div class="section-head"><div><h2>Progresión y estancamientos</h2><p>Compará los kilos utilizados en cada sesión y revisá cómo cambia tu rendimiento.</p></div></div>
+      <div class="card" style="margin-bottom:14px">
+        <div class="form-grid">
+          <div class="field"><label for="progressExercise">Ejercicio a analizar</label><select id="progressExercise"></select></div>
+          <div class="field"><label>Indicador complementario</label><div class="notice" style="margin:0">El rendimiento estimado usa la carga y las repeticiones de la primera serie (fórmula de Epley). Sirve para comparar sesiones, no es una medición real de 1RM.</div></div>
+        </div>
+      </div>
+      <div class="grid two-col">
+        <div class="card chart-card"><h3>Progresión de carga (kg)</h3><div id="progressChart" class="chart-wrap"></div><div class="legend"><span>Carga registrada</span></div></div>
+        <div class="card"><h3>Lectura del ejercicio</h3><div id="progressInsight"></div></div>
+      </div>
+      <div class="card" style="margin-top:14px"><h3>Historial por sesión</h3><div id="progressHistory"></div></div>
+      <div class="card" style="margin-top:14px"><h3>Resumen por semana</h3><p class="muted small">Muestra la mejor carga registrada por ejercicio en cada semana calendario (lunes a domingo).</p><div id="weeklySummary"></div></div>
+    </section>
+
+    <section class="view" id="view-volume">
+      <div class="section-head"><div><h2>Series semanales por músculo</h2><p>Modificá los objetivos y la rutina de arriba se redistribuirá automáticamente.</p></div><span class="pill good">Reparto automático</span></div>
+      <div class="card">
+        <div class="target-head"><span>Grupo muscular</span><span style="text-align:center">Objetivo</span><span style="text-align:center">En rutina</span></div>
+        <div class="target-list" id="targetList"></div>
+        <div class="form-actions"><button class="btn primary" id="saveTargets">Aplicar cambios</button><button class="btn soft" id="resetTargets">Restablecer valores iniciales</button><span class="hint" id="targetStatus">Los cambios se aplican al guardar.</span></div>
+      </div>
+      <div class="notice"><strong>Importante:</strong> el objetivo es el total semanal de series directas/principales. Los ejercicios compuestos también estimulan músculos secundarios, pero no se suman dos veces en este resumen. Si bajás mucho el objetivo, algún ejercicio puede quedar con 0 series.</div>
+    </section>
+  </main>
+  <footer class="footer"><span>Tracker personal · Funciona sin conexión después de abrir el archivo</span><span>Los datos se guardan localmente en este navegador y dispositivo.</span></footer>
+</div>
+<script>
+(() => {
+'use strict';
+const STORAGE_KEY='rutina_hipertrofia_tracker_v1';
+const defaultTargets={chest:10,back:12,quads:10,hams:10,shoulders:6,biceps:8,triceps:7,calves:6};
+const muscles=[
+ {id:'chest',name:'Pecho'}, {id:'back',name:'Espalda'}, {id:'quads',name:'Cuádriceps'}, {id:'hams',name:'Isquiotibiales'},
+ {id:'shoulders',name:'Hombros (lateral/posterior)'}, {id:'biceps',name:'Bíceps'}, {id:'triceps',name:'Tríceps'}, {id:'calves',name:'Gemelos'}
+];
+const days=[
+ {id:'mon',name:'Lunes — Torso',desc:'Pecho, espalda, hombros y brazos',exercises:[
+  ['bench','Press banca plano con barra','6–8','chest'],['incline','Press inclinado con barra','8–10','chest'],['latpulldown','Jalón al pecho','8–12','back'],['chestrow','Remo con pecho apoyado','8–12','back'],['lateral1','Elevaciones laterales','12–20','shoulders'],['ezcurl','Curl de bíceps con barra EZ','8–12','biceps'],['tricepspush','Extensión de tríceps en polea','10–15','triceps'] ]},
+ {id:'tue',name:'Martes — Piernas A',desc:'Cuádriceps e isquiotibiales',exercises:[
+  ['squat','Sentadilla con barra','6–10','quads'],['legext1','Extensión de cuádriceps','10–15','quads'],['rdl1','Peso muerto rumano','8–12','hams'],['lyingcurl1','Curl femoral tumbado','10–15','hams'],['calfstand','Gemelos de pie','10–15','calves'] ]},
+ {id:'thu',name:'Jueves — Push',desc:'Pecho, hombros y tríceps',exercises:[
+  ['machinepress','Press de pecho en máquina','8–12','chest'],['cablefly','Aperturas en polea','12–15','chest'],['lateral2','Elevaciones laterales con mancuernas','12–20','shoulders'],['katana','Extensión de tríceps Katana','10–15','triceps'],['ropetriceps','Extensión de tríceps en polea con cuerda','10–15','triceps'] ]},
+ {id:'fri',name:'Viernes — Pull',desc:'Espalda, deltoides posteriores y bíceps',exercises:[
+  ['neutralpulldown','Jalón al pecho con agarre neutro','8–12','back'],['seatedrow','Remo sentado en polea','8–12','back'],['facepull','Face pull','12–20','shoulders'],['preacher','Curl predicador','8–12','biceps'],['hammer','Curl martillo','10–12','biceps'] ]},
+ {id:'sat',name:'Sábado — Piernas B',desc:'Cuádriceps e isquiotibiales',exercises:[
+  ['legpress','Prensa inclinada','8–12','quads'],['legext2','Extensión de cuádriceps','10–15','quads'],['rdl2','Peso muerto rumano','8–12','hams'],['lyingcurl2','Curl femoral tumbado','10–15','hams'],['calfseated','Gemelos sentado','12–20','calves'] ]}
+];
+const exNames={};
+for(const d of days)for(const e of d.exercises)exNames[e[0]]={name:e[1],reps:e[2],muscle:e[3]};
+// Allocation weights preserve the original spreadsheet's distribution while always summing to the selected target.
+const allocations={
+ chest:[['bench',.30],['incline',.20],['machinepress',.30],['cablefly',.20]],
+ back:[['latpulldown',.25],['chestrow',.25],['neutralpulldown',.25],['seatedrow',.25]],
+ quads:[['squat',.30],['legext1',.20],['legpress',.30],['legext2',.20]],
+ hams:[['rdl1',.30],['lyingcurl1',.20],['rdl2',.30],['lyingcurl2',.20]],
+ shoulders:[['lateral1',1/3],['lateral2',1/3],['facepull',1/3]],
+ biceps:[['ezcurl',3/8],['preacher',3/8],['hammer',2/8]],
+ triceps:[['tricepspush',3/7],['katana',2/7],['ropetriceps',2/7]],
+ calves:[['calfstand',.5],['calfseated',.5]]
+};
+let state={targets:{...defaultTargets},logs:[]};
+try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');if(saved&&typeof saved==='object'){state.targets={...defaultTargets,...(saved.targets||{})};state.logs=Array.isArray(saved.logs)?saved.logs:[];}}catch(e){}
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));$('saveText').textContent='Guardado automáticamente en este navegador.';}catch(e){$('saveText').textContent='No se pudo guardar automáticamente. Exportá un backup para conservar los datos.';}}
+function allocate(total,parts){const raw=parts.map(x=>total*x[1]);const vals=raw.map(Math.floor);let left=Math.max(0,total-vals.reduce((a,b)=>a+b,0));const order=raw.map((v,i)=>({i,rem:v-vals[i]})).sort((a,b)=>b.rem-a.rem);for(let j=0;j<left&&j<order.length;j++)vals[order[j].i]++;const out={};parts.forEach((x,i)=>out[x[0]]=vals[i]);return out;}
+function currentSets(){let result={};for(const m of muscles){Object.assign(result,allocate(Math.max(0,Math.round(Number(state.targets[m.id])||0)),allocations[m.id]));}return result;}
+function allExercises(){const seen=new Map();for(const d of days)for(const e of d.exercises){const id=canonical(e[0]);if(!seen.has(id))seen.set(id,{id,name:byId(id).name,reps:e[2],muscle:e[3]});}return [...seen.values()];}
+function canonical(id){return ({legext1:'legext',legext2:'legext',rdl1:'rdl',rdl2:'rdl',lyingcurl1:'lyingcurl',lyingcurl2:'lyingcurl'})[id]||id;}
+function byId(id){const key=canonical(id);if(key==='legext')return {name:'Extensión de cuádriceps',reps:'10–15',muscle:'quads'};if(key==='rdl')return {name:'Peso muerto rumano',reps:'8–12',muscle:'hams'};if(key==='lyingcurl')return {name:'Curl femoral tumbado',reps:'10–15',muscle:'hams'};return exNames[key]||{name:key,reps:'',muscle:''};}
+function getIsoWeek(dateStr){const d=new Date(dateStr+'T12:00:00');const date=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));const day=date.getUTCDay()||7;date.setUTCDate(date.getUTCDate()+4-day);const yearStart=new Date(Date.UTC(date.getUTCFullYear(),0,1));const week=Math.ceil((((date-yearStart)/86400000)+1)/7);return `${date.getUTCFullYear()}-S${String(week).padStart(2,'0')}`;}
+function fmtDate(s){if(!s)return '—';return new Date(s+'T12:00:00').toLocaleDateString('es-AR',{day:'2-digit',month:'2-digit',year:'2-digit'});}
+function repsArray(log){return Array.isArray(log.reps)?log.reps:[];}
+function firstReps(log){return repsArray(log)[0]||0;}
+function e1rm(log){const r=firstReps(log);return Number(log.weight)*(1+r/30);}
+function getLogs(id){const key=canonical(id);return state.logs.filter(x=>canonical(x.exerciseId)===key).slice().sort((a,b)=>a.date.localeCompare(b.date)||String(a.createdAt||'').localeCompare(String(b.createdAt||'')));}
+function plateau(id){const logs=getLogs(id);if(logs.length<5)return {status:'insufficient',logs};const prior=logs.slice(0,-3),recent=logs.slice(-3);const priorBest=Math.max(...prior.map(e1rm));const recentBest=Math.max(...recent.map(e1rm));const stalled=recentBest<=priorBest*1.015;return {status:stalled?'stalled':'progress',logs,priorBest,recentBest};}
+function calcTotals(){const s=currentSets();const totals={};for(const m of muscles)totals[m.id]=allocations[m.id].reduce((n,p)=>n+(s[p[0]]||0),0);return totals;}
+function setTab(tab){document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+tab));if(tab==='progress')renderProgress();if(tab==='log')renderRecent();if(tab==='volume')renderTargets();}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>setTab(b.dataset.tab)));
+function renderHome(){const total=state.logs.length;const tracked=new Set(state.logs.map(x=>x.exerciseId)).size;const prCount=allExercises().filter(e=>{const ls=getLogs(e.id);return ls.length>1&&ls.some((x,i)=>i>0&&e1rm(x)>Math.max(0,...ls.slice(0,i).map(e1rm))*1.01);}).length;const stuck=allExercises().filter(e=>plateau(e.id).status==='stalled');$('kpis').innerHTML=[['Registros guardados',total,'Sesiones o ejercicios registrados'],['Ejercicios con historial',tracked,'De '+allExercises().length+' ejercicios'],['Marcas personales',prCount,'Mejoras de rendimiento estimado'],['Posibles estancamientos',stuck.length,'Revisar en progresión']].map(k=>`<div class="card"><div class="kpi-label">${k[0]}</div><div class="kpi-value">${k[1]}</div><div class="kpi-note">${k[2]}</div></div>`).join('');
+$('weekOverview').innerHTML=days.map(d=>`<div class="record-row"><div><strong>${d.name}</strong><div class="small muted">${d.desc}</div></div><span class="pill">${d.exercises.length} ejercicios</span></div>`).join('');
+if(!state.logs.length){$('homeAlerts').innerHTML='<div class="empty">Todavía no hay registros. Empezá anotando la primera sesión.</div>';return;}
+if(stuck.length){$('homeAlerts').innerHTML='<div class="alert-list">'+stuck.slice(0,5).map(e=>`<div class="alert"><strong>${esc(e.name)}</strong><p>Sin una mejora mayor al 1,5% en las últimas 3 sesiones registradas.</p></div>`).join('')+'</div>';}else{$('homeAlerts').innerHTML='<div class="success-note">Por ahora no se detectan posibles estancamientos con los datos disponibles. Seguí registrando tus sesiones para mejorar el análisis.</div>';}}
+function renderRoutine(){const sets=currentSets();$('routineDays').innerHTML=days.map(d=>`<div class="day-card"><div class="day-head"><div><div class="day-name">${d.name}</div><div class="day-desc">${d.desc}</div></div><span class="pill">${d.exercises.reduce((n,e)=>n+(sets[e[0]]||0),0)} series</span></div><div class="exercise-list">${d.exercises.map(e=>{const n=sets[e[0]]||0;return `<div class="exercise"><div><div class="exercise-name">${esc(e[1])}</div><div class="exercise-meta">${esc(muscles.find(m=>m.id===e[3])?.name||'')} · ${n===0?'Sin series asignadas':(n+' serie(s) efectivas')}</div></div><div class="sets">${n}×</div><div class="reps">${e[2]} reps</div><button class="btn tiny" data-log-ex="${e[0]}" data-log-day="${d.id}">Registrar</button></div>`;}).join('')}</div></div>`).join('');
+document.querySelectorAll('[data-log-ex]').forEach(b=>b.addEventListener('click',()=>{setTab('log');$('logDay').value=b.dataset.logDay;updateExerciseOptions(canonical(b.dataset.logEx));$('logExercise').value=canonical(b.dataset.logEx);$('logDate').value=localToday();$('logWeight').focus();}));}
+function localToday(){const d=new Date();return new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);}
+function renderDayOptions(){ $('logDay').innerHTML=days.map(d=>`<option value="${d.id}">${d.name}</option>`).join('');updateExerciseOptions();$('logDate').value=localToday();}
+function updateExerciseOptions(preselect){const day=days.find(d=>d.id===$('logDay').value)||days[0];$('logExercise').innerHTML=day.exercises.map(e=>`<option value="${canonical(e[0])}">${esc(e[1])} (${currentSets()[e[0]]||0} series)</option>`).join('');if(preselect&&day.exercises.some(e=>canonical(e[0])===canonical(preselect)))$('logExercise').value=canonical(preselect);}
+$('logDay').addEventListener('change',()=>updateExerciseOptions());
+$('logForm').addEventListener('submit',e=>{e.preventDefault();const ex=$('logExercise').value, date=$('logDate').value, weight=Number($('logWeight').value);const reps=$('logReps').value.split(/[;,\s]+/).filter(Boolean).map(Number);if(!date||!ex||!Number.isFinite(weight)||weight<0||!reps.length||reps.some(x=>!Number.isInteger(x)||x<1||x>100)){alert('Revisá la fecha, el peso y las repeticiones. Usá valores positivos y separá las repeticiones por coma.');return;}const day=$('logDay').value;state.logs.push({id:crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random(),date,day,exerciseId:ex,weight,reps,rir:$('logRir').value,notes:$('logNotes').value.trim(),createdAt:new Date().toISOString()});save();$('logWeight').value='';$('logReps').value='';$('logNotes').value='';$('logRir').value='';renderRecent();renderHome();alert('Registro guardado.');});
+$('logForm').addEventListener('reset',()=>setTimeout(()=>{updateExerciseOptions();$('logDate').value=localToday();},0));
+function renderRecent(){const logs=state.logs.slice().sort((a,b)=>b.date.localeCompare(a.date)||String(b.createdAt||'').localeCompare(String(a.createdAt||''))).slice(0,8);if(!logs.length){$('recentLogs').innerHTML='<div class="empty">Aún no hay sesiones registradas.</div>';return;}$('recentLogs').innerHTML=logs.slice(0,8).map(l=>`<div class="record-row" style="padding:9px 0;border-bottom:1px solid rgba(54,73,97,.5)"><div><strong>${esc(byId(l.exerciseId).name)}</strong><div class="small muted">${fmtDate(l.date)} · ${days.find(d=>d.id===l.day)?.name.split(' — ')[0]||''}</div></div><div class="right"><strong>${l.weight} kg</strong><div class="small muted">${repsArray(l).join(' / ')} reps</div></div></div>`).join('');}
+function renderTargets(){const totals=calcTotals();$('targetList').innerHTML=muscles.map(m=>`<div class="target-row"><div><div class="target-name">${m.name}</div><div class="target-sub">Series directas por semana</div></div><input class="target-input" type="number" min="0" max="40" step="1" data-target="${m.id}" value="${Number(state.targets[m.id])||0}" aria-label="Objetivo ${m.name}"><div class="target-current" id="cur-${m.id}">${totals[m.id]}</div></div>`).join('');}
+$('saveTargets').addEventListener('click',()=>{let valid=true;document.querySelectorAll('[data-target]').forEach(i=>{const n=Number(i.value);if(!Number.isInteger(n)||n<0||n>40){valid=false;i.style.borderColor='var(--danger)';}else{i.style.borderColor='';state.targets[i.dataset.target]=n;}});if(!valid){$('targetStatus').textContent='Ingresá números enteros entre 0 y 40.';return;}save();renderTargets();renderRoutine();renderHome();renderDayOptions();$('targetStatus').textContent='Cambios aplicados. La rutina se redistribuyó.';});
+$('resetTargets').addEventListener('click',()=>{if(!confirm('¿Restablecer los objetivos iniciales de series?'))return;state.targets={...defaultTargets};save();renderTargets();renderRoutine();renderDayOptions();renderHome();$('targetStatus').textContent='Valores iniciales restablecidos.';});
+function renderProgress(){const exercises=allExercises();const sel=$('progressExercise');const old=sel.value;sel.innerHTML=exercises.map(e=>`<option value="${e.id}">${esc(e.name)}</option>`).join('');if(exercises.some(e=>e.id===old))sel.value=old;if(!sel.value&&exercises.length)sel.value=exercises[0].id;drawSelectedProgress();renderWeeklySummary();}
+$('progressExercise').addEventListener('change',drawSelectedProgress);
+function drawSelectedProgress(){const id=$('progressExercise').value;if(!id){$('progressChart').innerHTML='<div class="empty">No hay ejercicios para mostrar.</div>';$('progressInsight').innerHTML='<div class="empty">Registrá tus primeros entrenamientos.</div>';$('progressHistory').innerHTML='';return;}const logs=getLogs(id);const p=plateau(id);if(!logs.length){$('progressChart').innerHTML='<div class="empty">Todavía no hay datos de este ejercicio.</div>';$('progressInsight').innerHTML='<div class="empty">Cuando registres sesiones, vas a ver tu evolución y posibles estancamientos.</div>';$('progressHistory').innerHTML='<div class="empty">Sin registros.</div>';return;}
+const max=Math.max(...logs.map(x=>Number(x.weight))),min=Math.min(...logs.map(x=>Number(x.weight)));const W=640,H=230,L=48,R=18,T=18,B=36,innerW=W-L-R,innerH=H-T-B;const pad=(max-min)*.18||Math.max(2,max*.08);const lo=Math.max(0,min-pad),hi=max+pad;const x=i=>L+(logs.length===1?innerW/2:i*innerW/(logs.length-1));const y=v=>T+innerH-(v-lo)/(hi-lo||1)*innerH;let grid='';for(let i=0;i<4;i++){const val=lo+(hi-lo)*i/3,yy=y(val);grid+=`<line x1="${L}" y1="${yy}" x2="${W-R}" y2="${yy}" stroke="#34465e" stroke-dasharray="4 5"/><text x="${L-8}" y="${yy+4}" fill="#91a4bb" font-size="10" text-anchor="end">${val.toFixed(1)}</text>`;}const pts=logs.map((l,i)=>`${x(i)},${y(Number(l.weight))}`).join(' ');const circles=logs.map((l,i)=>`<circle cx="${x(i)}" cy="${y(Number(l.weight))}" r="4.5" fill="#8bc4ff" stroke="#0f1a29" stroke-width="2"><title>${fmtDate(l.date)} · ${l.weight} kg · ${repsArray(l).join('/') } reps</title></circle>`).join('');const labels=logs.map((l,i)=>i===0||i===logs.length-1||i===Math.floor((logs.length-1)/2)?`<text x="${x(i)}" y="${H-10}" text-anchor="middle" fill="#91a4bb" font-size="10">${fmtDate(l.date)}</text>`:'').join('');$('progressChart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gráfico de peso por sesión">${grid}<polyline points="${pts}" fill="none" stroke="#8bc4ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${circles}${labels}</svg>`;
+const best=Math.max(...logs.map(e1rm));const latest=logs[logs.length-1];const first=logs[0];const delta=logs.length>1?((Number(latest.weight)-Number(first.weight))/Number(first.weight||1))*100:0;const status=p.status==='stalled'?'<span class="pill warn">Posible estancamiento</span>':p.status==='progress'?'<span class="pill good">Progreso detectado</span>':'<span class="pill">Faltan registros</span>';
+let detail='';if(p.status==='stalled')detail=`<div class="alert" style="margin-top:12px"><strong>Revisá este ejercicio</strong><p>Las últimas 3 sesiones no superan en más de 1,5% el mejor rendimiento estimado previo. Comprobá técnica, descanso, alimentación y si estás recuperándote bien antes de cambiar la rutina.</p></div>`;else if(p.status==='progress')detail='<div class="success-note" style="margin-top:12px">Hay una mejora reciente en el rendimiento estimado respecto de los registros anteriores.</div>';else detail='<div class="notice" style="margin-top:12px">Se necesitan 5 registros como mínimo para evaluar posibles estancamientos.</div>';
+$('progressInsight').innerHTML=`${status}<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px"><div><div class="kpi-label">Última carga</div><div class="kpi-value" style="font-size:24px">${latest.weight} kg</div></div><div><div class="kpi-label">Mejor 1RM estimado</div><div class="kpi-value" style="font-size:24px">${best.toFixed(1)} kg</div></div></div><p class="small muted">Primera sesión: ${fmtDate(first.date)} · Última sesión: ${fmtDate(latest.date)}${logs.length>1?` · Cambio de carga: ${delta>=0?'+':''}${delta.toFixed(1)}%`:''}</p>${detail}`;
+$('progressHistory').innerHTML=`<div class="table-wrap"><table><thead><tr><th>Fecha</th><th>Día</th><th>Peso</th><th>Reps por serie</th><th>RIR</th><th>1RM estimado</th><th></th></tr></thead><tbody>${logs.slice().reverse().map(l=>`<tr><td>${fmtDate(l.date)}</td><td>${days.find(d=>d.id===l.day)?.name.split(' — ')[0]||'—'}</td><td><strong>${l.weight} kg</strong></td><td>${repsArray(l).join(' / ')}</td><td>${l.rir||'—'}</td><td>${e1rm(l).toFixed(1)} kg</td><td><button class="del" data-delete="${esc(l.id)}" title="Eliminar registro">Eliminar</button></td></tr>`).join('')}</tbody></table></div>`;
+document.querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click',()=>{if(!confirm('¿Eliminar este registro?'))return;state.logs=state.logs.filter(l=>l.id!==b.dataset.delete);save();renderProgress();renderRecent();renderHome();}));}
+function renderWeeklySummary(){const groups={};for(const l of state.logs){const w=getIsoWeek(l.date);groups[w]??={};const ex=l.exerciseId;groups[w][ex]??=[];groups[w][ex].push(l);}const weeks=Object.keys(groups).sort().reverse();if(!weeks.length){$('weeklySummary').innerHTML='<div class="empty">Todavía no hay semanas registradas.</div>';return;}$('weeklySummary').innerHTML=weeks.slice(0,12).map(w=>`<div style="margin-bottom:13px"><div style="font-weight:800;font-size:13px;margin:6px 0">${w.replace('-S',' · Semana ')}</div><div class="table-wrap"><table><thead><tr><th>Ejercicio</th><th>Sesiones</th><th>Mejor carga</th><th>Repeticiones</th></tr></thead><tbody>${Object.entries(groups[w]).map(([id,arr])=>{const best=arr.reduce((a,b)=>Number(a.weight)>=Number(b.weight)?a:b);return `<tr><td>${esc(byId(id).name)}</td><td>${arr.length}</td><td>${best.weight} kg</td><td>${repsArray(best).join(' / ')}</td></tr>`;}).join('')}</tbody></table></div></div>`).join('');}
+$('exportJson').addEventListener('click',()=>{const blob=new Blob([JSON.stringify({version:1,exportedAt:new Date().toISOString(),...state},null,2)],{type:'application/json'});download(blob,'backup_rutina_hipertrofia.json');});
+$('exportCsv').addEventListener('click',()=>{const rows=[['Fecha','Semana','Dia','Ejercicio','Peso kg','Repeticiones por serie','RIR','Notas']];state.logs.slice().sort((a,b)=>a.date.localeCompare(b.date)).forEach(l=>rows.push([l.date,getIsoWeek(l.date),days.find(d=>d.id===l.day)?.name||l.day,byId(l.exerciseId).name,l.weight,repsArray(l).join('/'),l.rir||'',l.notes||'']));const csv='\ufeff'+rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(';')).join('\r\n');download(new Blob([csv],{type:'text/csv;charset=utf-8'}),'historial_rutina.csv');});
+function download(blob,name){const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
+$('importBtn').addEventListener('click',()=>$('importFile').click());
+$('importFile').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{const d=JSON.parse(await f.text());if(!d||!Array.isArray(d.logs)||!d.targets)throw new Error('Formato inválido');if(!confirm('Restaurar el backup reemplazará los datos actuales de esta aplicación. ¿Continuar?'))return;state={targets:{...defaultTargets,...d.targets},logs:d.logs};save();renderAll();alert('Backup restaurado correctamente.');}catch(err){alert('No se pudo restaurar el archivo. Verificá que sea un backup JSON de esta aplicación.');}finally{e.target.value='';}});
+function renderAll(){renderHome();renderRoutine();renderDayOptions();renderRecent();renderTargets();renderProgress();}
+renderAll();
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(err => console.warn('No se pudo activar el modo instalable/offline:', err));
+  });
+}
+</script>
+</body>
+</html>
