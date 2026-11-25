@@ -1,11 +1,3 @@
-HIPERTROFIA TRACKER V8 · PAQUETE INSTALABLE
+Hipertrofia Tracker V9
 
-Contenido: index.html, manifest.webmanifest, sw.js e iconos PWA.
-
-Para usarlo online: publicá el contenido de esta carpeta en la misma URL/origen donde usabas la V7 para que el navegador conserve el almacenamiento local.
-
-Antes de actualizar: abrí Ajustes > Descargar backup.
-
-Los datos se guardan en este navegador y dispositivo. La versión móvil y una futura app de Windows no comparten datos automáticamente; para moverlos, usá el backup.
-
-Para instalar: abrí la URL publicada en Chrome/Edge y usá la opción Instalar aplicación cuando esté disponible.
+Abrí index.html para usar la aplicación. Para instalarla como PWA, publicá el contenido completo en un hosting HTTPS. Los datos se guardan localmente en el navegador. La V9 conserva la clave de almacenamiento de V8; hacé un backup antes de actualizar.
